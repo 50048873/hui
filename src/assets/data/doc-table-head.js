@@ -17,7 +17,7 @@ export const attrHead = [
   {
     title: '是否必填'
   }
-];
+]
 
 export const eventHead = [
   {
@@ -29,4 +29,4 @@ export const eventHead = [
   {
     title: '回调参数'
   }
-];
+]

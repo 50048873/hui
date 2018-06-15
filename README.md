@@ -1,6 +1,6 @@
 # hui
 
-> A Vue.js project
+> hui vue components
 
 ## Build Setup
 
