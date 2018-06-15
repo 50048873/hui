@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "lint-fix": "eslint --fix --ext .js,.vue src",
-    "precommit": "npm run lint",
+    "precommit": "git add -A && npm run lint-fix",
     "build": "node build/build.js"
   },
   "dependencies": {

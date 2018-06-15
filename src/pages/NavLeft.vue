@@ -1,6 +1,6 @@
 <template>
   <div class="nav-left">
-    <hui-nav1 :data="data"></hui-nav1>
+    <HuiNav1 :data="data"></HuiNav1>
   </div>
 </template>
 

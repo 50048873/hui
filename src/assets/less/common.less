@@ -1,18 +1,20 @@
 @import './variable.less';
 
-.table {
+.Table {
   border-collapse: collapse;
   width: 100%;
   background-color: #fff;
-  margin-bottom: 45px;
+  margin-bottom: @margin-large;
   line-height: 1.5;
   th {
     text-align: left;
     white-space: nowrap;
-    color: #666;
-    font-weight: 400;
+    font-weight: 700;
     border-bottom: 1px solid #d8d8d8;
     padding: 15px;
     max-width: 250px;
+  }
+  td {
+    padding: 10px;
   }
 }

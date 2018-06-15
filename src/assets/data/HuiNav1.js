@@ -22,6 +22,10 @@ export default [
       {
         title: '菜单1',
         to: '/component/menu1'
+      },
+      {
+        title: '列表1',
+        to: '/component/list1'
       }
     ]
   }

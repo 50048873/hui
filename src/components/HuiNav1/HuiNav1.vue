@@ -1,5 +1,5 @@
 <template>
-  <nav class="hui-nav1-theme1">
+  <nav class="hui-nav1-theme1" v-if="data.length">
     <ul class="level-1">
       <li v-for="(item, index) in data" :key="index">
         <h4 class="title">{{item.title}}</h4>
@@ -34,8 +34,7 @@ export default {
       type: Array,
       default: () => {
         return []
-      },
-      required: true
+      }
     },
     replace: {
       type: Boolean,

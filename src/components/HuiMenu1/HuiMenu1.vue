@@ -54,7 +54,7 @@ export default {
     },
     theme: {
       type: String,
-      default: 'hui-menu1-theme1'
+      default: 'HuiMenu1-theme1'
     },
     oneLineCount: {
       type: [String, Number],
@@ -76,16 +76,16 @@ export default {
       let sizeCls
       switch (this.size) {
         case 'medium':
-          sizeCls = 'hui-menu1-theme1--medium'
+          sizeCls = 'HuiMenu1-theme1--medium'
           break
         case 'small':
-          sizeCls = 'hui-menu1-theme1--small'
+          sizeCls = 'HuiMenu1-theme1--small'
           break
         case 'mini':
-          sizeCls = 'hui-menu1-theme1--mini'
+          sizeCls = 'HuiMenu1-theme1--mini'
           break
         default:
-          sizeCls = 'hui-menu1-theme1--large'
+          sizeCls = 'HuiMenu1-theme1--large'
           break
       }
       return sizeCls
@@ -131,7 +131,7 @@ export default {
   @medium: 60px;
   @small: 48px;
   @mini: 36px;
-  .hui-menu1-theme1 {
+  .HuiMenu1-theme1 {
     a {
       display: inline-block;
       color: @color-text;
@@ -152,7 +152,7 @@ export default {
         padding-top: 6px;
       }
     }
-    &.hui-menu1-theme1--large {
+    &.HuiMenu1-theme1--large {
       .iconWrap {
         width: @large;
         height: @large;
@@ -160,7 +160,7 @@ export default {
         font-size: @large / 2;
       }
     }
-    &.hui-menu1-theme1--medium {
+    &.HuiMenu1-theme1--medium {
       .iconWrap {
         width: @medium;
         height: @medium;
@@ -168,7 +168,7 @@ export default {
         font-size: @medium / 2;
       }
     }
-    &.hui-menu1-theme1--small {
+    &.HuiMenu1-theme1--small {
       .iconWrap {
         width: @small;
         height: @small;
@@ -176,7 +176,7 @@ export default {
         font-size: @small / 2;
       }
     }
-    &.hui-menu1-theme1--mini {
+    &.HuiMenu1-theme1--mini {
       .iconWrap {
         width: @mini;
         height: @mini;

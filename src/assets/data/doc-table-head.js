@@ -13,9 +13,6 @@ export const attrHead = [
   },
   {
     title: '默认值'
-  },
-  {
-    title: '是否必填'
   }
 ]
 
