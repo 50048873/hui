@@ -5,20 +5,15 @@
         <span class="line-item">
           <em class="title">{{item.title}}</em>
         </span>
-        <span class="line-item">
+        <span class="line-item time">
           <em>{{item.time}}</em>
         </span>
       </div>
       <div class="line">
-        <span class="line-item" :style="getWarn(item.status)">
-          <em>{{title1}}</em>
-          <em>{{item.sw}}</em>
-          <em>{{unit1}}</em>
-        </span>
-        <span class="line-item">
-          <em>{{title2}}</em>
-          <em>{{item.yjsw}}</em>
-          <em>{{unit2}}</em>
+        <span class="line-item" :style="getWarn(item.status)" v-for="(item, index) in item.children" :key="index">
+          <em>{{item.title}}</em>
+          <em>{{item.value}}</em>
+          <em>{{item.unit}}</em>
         </span>
       </div>
     </li>
@@ -35,22 +30,6 @@ export default {
       default: () => {
         return []
       }
-    },
-    title1: {
-      type: String,
-      default: ''
-    },
-    title2: {
-      type: String,
-      default: ''
-    },
-    unit1: {
-      type: String,
-      default: ''
-    },
-    unit2: {
-      type: String,
-      default: ''
     }
   },
   methods: {
@@ -73,7 +52,7 @@ export default {
       padding: 10px;
       .line {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         line-height: 1.8;
         .line-item {
           display: block;
@@ -83,9 +62,9 @@ export default {
           .title {
             font-weight: bold;
           }
-          &:first-child {
-            flex: 1;
-          }
+        }
+        .time {
+          text-align: right;
         }
       }
     }

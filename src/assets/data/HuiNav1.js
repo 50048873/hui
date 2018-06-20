@@ -26,6 +26,14 @@ export default [
       {
         title: '列表1',
         to: '/component/list1'
+      },
+      {
+        title: '导航1',
+        to: '/component/nav1'
+      },
+      {
+        title: '头部1',
+        to: '/component/header1'
       }
     ]
   }

@@ -17,7 +17,7 @@
 
 <script>
 import {eventHead} from '@/assets/data/doc-table-head'
-import data from '@/assets/data/HuiMenu1-doc'
+import data from '@/assets/data/doc'
 export default {
   name: 'Table',
   methods: {

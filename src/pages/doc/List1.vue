@@ -1,27 +1,36 @@
 <template>
-  <div class="Menu1">
-    <Title title="列表1（lsit1）" des="常用于移动端列表数据展示" theme="Title-theme1"></Title>
-    <Title title="基础用法" des="基础的、简洁的列表"></Title>
-    <HuiList1 :data="data" title1="水位：" unit1="m" title2="预警水位：" unit2="m"></HuiList1>
+  <div class="List1">
+    <Title :title="docData.title" :des="docData.titleDes" theme="Title-theme1"></Title>
+    <section v-for="(item, index) in docData.example" :key="index">
+      <Title :title="item.title" :des="item.titleDes"></Title>
+      <Example :code="item.code">
+        <HuiList1 :data="item.data"></HuiList1>
+      </Example>
+    </section>
     <DocApi></DocApi>
   </div>
 </template>
 
 <script>
-import HuiList1 from '@/components/HuiList1/HuiList1'
-import data from '@/assets/data/HuiList1-data'
 import Title from '@/pages/common/Title'
 import DocApi from '@/pages/common/DocApi'
+import HuiList1 from '@/components/HuiList1/HuiList1'
+import Example from '@/pages/common/Example'
+import docData from '@/assets/data/doc'
 export default {
-  name: 'Menu1',
+  name: 'List1',
   components: {
     HuiList1,
     Title,
-    DocApi
+    DocApi,
+    Example
   },
   methods: {
     initSingeDirectionData () {
-      this.data = data
+      let res = docData.filter((item) => {
+        return item.id === this.$route.name.toLowerCase()
+      })
+      this.docData = res[0]
     }
   },
   created () {
@@ -32,6 +41,6 @@ export default {
 
 <!-- Add "scoped" DocApi to limit CSS to this component only -->
 <style scoped lang="less">
-  .Menu1 {
+  .List1 {
   }
 </style>

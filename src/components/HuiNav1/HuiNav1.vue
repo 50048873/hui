@@ -15,7 +15,8 @@
               :activeClass="activeClass(item)"
               :exact="item.exact || exact"
               :event="item.event || event"
-              :exactActiveClass="exactActiveClass(item)">
+              :exactActiveClass="exactActiveClass(item)"
+              @click="navClick(item, index)">
               {{item.title}}
             </router-link>
           </li>
@@ -71,6 +72,9 @@ export default {
         return exactActiveClass
       }
       return item.exactActiveClass
+    },
+    navClick (item, index) {
+      this.$emit('nav-click', item, index)
     }
   }
 }
