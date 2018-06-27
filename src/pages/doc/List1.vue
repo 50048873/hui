@@ -4,7 +4,12 @@
     <section v-for="(item, index) in docData.example" :key="index">
       <Title :title="item.title" :des="item.titleDes"></Title>
       <Example :code="item.code">
-        <HuiList1 :data="item.data"></HuiList1>
+        <template v-if="index === 0">
+          <HuiList1 :data="item.data"></HuiList1>
+        </template>
+        <template v-if="index === 1">
+          <HuiList1 :data="item.data" theme="HuiList1-theme2"></HuiList1>
+        </template>
       </Example>
     </section>
     <DocApi></DocApi>
@@ -14,13 +19,11 @@
 <script>
 import Title from '@/pages/common/Title'
 import DocApi from '@/pages/common/DocApi'
-import HuiList1 from '@/components/HuiList1/HuiList1'
 import Example from '@/pages/common/Example'
 import docData from '@/assets/data/doc'
 export default {
   name: 'List1',
   components: {
-    HuiList1,
     Title,
     DocApi,
     Example

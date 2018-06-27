@@ -14,13 +14,11 @@
 <script>
 import Title from '@/pages/common/Title'
 import DocApi from '@/pages/common/DocApi'
-import HuiNav1 from '@/components/HuiNav1/HuiNav1'
 import Example from '@/pages/common/Example'
 import docData from '@/assets/data/doc'
 export default {
   name: 'Nav1',
   components: {
-    HuiNav1,
     Title,
     DocApi,
     Example

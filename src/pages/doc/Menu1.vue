@@ -14,13 +14,11 @@
 <script>
 import Title from '@/pages/common/Title'
 import DocApi from '@/pages/common/DocApi'
-import HuiMenu1 from '@/components/HuiMenu1/HuiMenu1'
 import Example from '@/pages/common/Example'
 import docData from '@/assets/data/doc'
 export default {
   name: 'Menu1',
   components: {
-    HuiMenu1,
     Title,
     DocApi,
     Example

@@ -34,6 +34,14 @@ export default [
       {
         title: '头部1',
         to: '/component/header1'
+      },
+      {
+        title: '选项卡1',
+        to: '/component/tab1'
+      },
+      {
+        title: '表格1',
+        to: '/component/table1'
       }
     ]
   }

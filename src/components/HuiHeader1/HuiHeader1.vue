@@ -12,8 +12,8 @@
 
 <script>
 export default {
-  name: 'HuiHeader',
-  componentName: 'HuiHeader',
+  name: 'HuiHeader1',
+  componentName: 'HuiHeader1',
   props: {
     iconLeft: {
       type: String,

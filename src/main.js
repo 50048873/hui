@@ -8,6 +8,9 @@ import '@/assets/less/base.less'
 import '@/assets/less/common.less'
 import '@/assets/font/font-awesome-4.7.0/css/font-awesome.min.css'
 
+import useComponent from '@/assets/js/useComponent'
+useComponent()
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

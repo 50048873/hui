@@ -4,7 +4,7 @@
     <section v-for="(item, index) in docData.example" :key="index">
       <Title :title="item.title" :des="item.titleDes"></Title>
       <Example :code="item.code">
-        <HuiHeader1 title="水情信息" iconRight="fa fa-cog" @header-left-click="headerLeftClick"></HuiHeader1>
+        <HuiTab1 size="medium" :data="item.data"></HuiTab1>
       </Example>
     </section>
     <DocApi></DocApi>
@@ -29,9 +29,6 @@ export default {
         return item.id === this.$route.name.toLowerCase()
       })
       this.docData = res[0]
-    },
-    headerLeftClick (title) {
-      console.log(title)
     }
   },
   created () {

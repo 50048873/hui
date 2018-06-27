@@ -47,12 +47,12 @@ const list1 = {
         {
           title: '中宁站',
           time: '2018-06-13 14:22',
+          status: 1,
           children: [
             {
               title: '水位',
               value: '1443.54',
-              unit: 'm',
-              status: 1
+              unit: 'm'
             },
             {
               title: '预警水位',
@@ -64,12 +64,12 @@ const list1 = {
         {
           title: '红堡寺站',
           time: '2018-06-13 14:22',
+          status: 1,
           children: [
             {
               title: '水位',
               value: '1730.24',
-              unit: 'm',
-              status: 1
+              unit: 'm'
             },
             {
               title: '预警水位',
@@ -102,12 +102,12 @@ const list1 = {
         {
           title: '中宁站',
           time: '2018-06-13 14:22',
+          status: 1,
           children: [
             {
               title: '水位',
               value: '1443.54',
-              unit: 'm',
-              status: 1
+              unit: 'm'
             },
             {
               title: '预警水位',
@@ -128,8 +128,7 @@ const list1 = {
             {
               title: '水位',
               value: '1730.24',
-              unit: 'm',
-              status: 1
+              unit: 'm'
             },
             {
               title: '预警水位',
@@ -207,6 +206,42 @@ const nav1 = {
               to: '/component/nav1'
             }
           ]
+        }
+      ]
+    }
+  ]
+}
+
+const tab1 = {
+  example: [
+    {
+      data: [
+        {
+          title: '图形'
+        },
+        {
+          title: '表格'
+        }
+      ]
+    }
+  ]
+}
+
+const table1 = {
+  example: [
+    {
+      data: [
+        {
+          time: '2018-06-21 11:30',
+          value: '2.80'
+        },
+        {
+          time: '2018-06-21 11:30',
+          value: '2.80'
+        },
+        {
+          time: '2018-06-21 11:30',
+          value: '2.80'
         }
       ]
     }
@@ -324,6 +359,13 @@ export default [
         type: 'Array',
         optional: '—',
         default: '—'
+      },
+      {
+        attr: 'theme',
+        des: '主题（HuiList1-theme1 / HuiList1-theme2）',
+        type: 'String',
+        optional: '—',
+        default: 'HuiList1-theme1'
       }
     ],
     events: [
@@ -355,11 +397,11 @@ export default [
         data: list1.example[0].data
       },
       {
-        title: '第2行多于2项的用法',
+        title: '第2套主题及第2行多于2项以上的用法',
         titleDes: '第2行可显示多条数据，但要考虑移动端显示效果',
         code: `
           <template>
-            <HuiList1 :data="data"></HuiList1>
+            <HuiList1 :data="data" theme="HuiList1-theme2"></HuiList1>
           </template>
 
           <script>
@@ -517,6 +559,89 @@ export default [
           </template>
         `,
         data: null
+      }
+    ]
+  },
+  {
+    id: 'tab1',
+    title: '选项卡1（tab1）',
+    titleDes: '常用于内容切换的选项卡',
+    attrs: [
+      {
+        attr: 'data',
+        des: '选项卡数据',
+        type: 'Array',
+        optional: '—',
+        default: '—'
+      }
+    ],
+    events: [
+      {
+        attr: 'tab-click',
+        des: '选项卡被单击时触发',
+        callbackParam: '(item, index)'
+      }
+    ],
+    example: [
+      {
+        title: '基础用法',
+        titleDes: '基础的、简洁的导航',
+        code: `
+          <template>
+            <HuiTab1 :data="data"></HuiTab1>
+          </template>
+
+          <script>
+          export default {
+            data () {
+              return {
+                data: ${JSON.stringify(tab1.example[0].data, null, 2)}
+              }
+            }
+          }
+          </script>
+        `,
+        data: tab1.example[0].data
+      }
+    ]
+  },
+  {
+    id: 'table1',
+    title: '表格1（table1）',
+    titleDes: '常用于移动端的基础表格',
+    attrs: [
+      {
+        attr: 'data',
+        des: '表格数据',
+        type: 'Array',
+        optional: '—',
+        default: '—'
+      }
+    ],
+    events: null,
+    example: [
+      {
+        title: '基础用法',
+        titleDes: '基础的、简洁的表格',
+        code: `
+          <template>
+            <HuiTable :data="data">
+              <HuiTableColumn prop="time" label="时间"></HuiTableColumn>
+              <HuiTableColumn prop="value" label="水位（m）"></HuiTableColumn>
+            </HuiTable>
+          </template>
+
+          <script>
+          export default {
+            data () {
+              return {
+                data: ${JSON.stringify(table1.example[0].data, null, 2)}
+              }
+            }
+          }
+          </script>
+        `,
+        data: table1.example[0].data
       }
     ]
   }
