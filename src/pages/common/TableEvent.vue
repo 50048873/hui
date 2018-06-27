@@ -16,13 +16,22 @@
 </template>
 
 <script>
-import {eventHead} from '@/assets/data/doc-table-head'
 import data from '@/assets/data/doc'
 export default {
   name: 'Table',
   methods: {
     initSingleDirectionData () {
-      this.eventHead = eventHead
+      this.eventHead = [
+        {
+          title: '事件名称'
+        },
+        {
+          title: '说明'
+        },
+        {
+          title: '回调参数'
+        }
+      ]
       let res = data.filter((item) => {
         return item.id === this.$route.name.toLowerCase()
       })

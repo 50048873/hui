@@ -18,13 +18,28 @@
 </template>
 
 <script>
-import {attrHead} from '@/assets/data/doc-table-head'
 import data from '@/assets/data/doc'
 export default {
   name: 'TableAttr',
   methods: {
     initSingleDirectionData () {
-      this.attrHead = attrHead
+      this.attrHead = [
+        {
+          title: '参数'
+        },
+        {
+          title: '说明'
+        },
+        {
+          title: '类型'
+        },
+        {
+          title: '可选值'
+        },
+        {
+          title: '默认值'
+        }
+      ]
       let res = data.filter((item) => {
         return item.id === this.$route.name.toLowerCase()
       })
