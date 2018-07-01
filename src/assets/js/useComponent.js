@@ -1,18 +1,24 @@
 import Vue from 'vue'
-import HuiHeader1 from '@/components/HuiHeader1'
-import HuiList1 from '@/components/HuiList1'
-import HuiMenu1 from '@/components/HuiMenu1'
-import HuiNav1 from '@/components/HuiNav1'
-// import HuiSlide from '@/components/HuiSlide'
-import HuiTab1 from '@/components/HuiTab1'
-import HuiTable1 from '@/components/HuiTable1'
+import FloatBall from '@/components/FloatBall/'
+import Icon from '@/components/Icon/'
+import Header1 from '@/components/Header1'
+import List1 from '@/components/List1'
+import Menu1 from '@/components/Menu1'
+import Nav1 from '@/components/Nav1'
+import RouterviewSlide from '@/components/RouterviewSlide'
+import Tab1 from '@/components/Tab1'
+import Table1 from '@/components/Table1'
+import Table2 from '@/components/Table2'
 
 export default () => {
-  Vue.use(HuiHeader1)
-  Vue.use(HuiList1)
-  Vue.use(HuiMenu1)
-  Vue.use(HuiNav1)
-  // Vue.use(HuiSlide)
-  Vue.use(HuiTab1)
-  Vue.use(HuiTable1)
+  Vue.use(FloatBall)
+  Vue.use(Icon)
+  Vue.use(Header1)
+  Vue.use(List1)
+  Vue.use(Menu1)
+  Vue.use(Nav1)
+  Vue.use(RouterviewSlide)
+  Vue.use(Tab1)
+  Vue.use(Table1)
+  Vue.use(Table2)
 }

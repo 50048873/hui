@@ -9,7 +9,9 @@ import '@/assets/less/common.less'
 import '@/assets/font/font-awesome-4.7.0/css/font-awesome.min.css'
 
 import useComponent from '@/assets/js/useComponent'
+import usePagesCommon from '@/assets/js/usePagesCommon'
 useComponent()
+usePagesCommon()
 
 Vue.config.productionTip = false
 

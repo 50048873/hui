@@ -10,7 +10,7 @@
 
 <script>
 import Header from '@/pages/Header'
-import NavLeft from '@/pages/NavLeft/NavLeft'
+import NavLeft from '@/pages/navLeft/NavLeft'
 export default {
   name: 'App',
   components: {

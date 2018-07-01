@@ -1,53 +1,74 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Menu1 from '@/pages/doc/Menu1'
-import List1 from '@/pages/doc/List1'
-import Nav1 from '@/pages/doc/Nav1'
-import Header1 from '@/pages/doc/Header1'
-import Tab1 from '@/pages/doc/Tab1'
-import Table1 from '@/pages/doc/Table1'
+import DocFloatBall from '@/pages/doc/DocFloatBall'
+import DocHeader1 from '@/pages/doc/DocHeader1'
+import DocIcon from '@/pages/doc/DocIcon'
+import DocList1 from '@/pages/doc/DocList1'
+import DocMenu1 from '@/pages/doc/DocMenu1'
+import DocNav1 from '@/pages/doc/DocNav1'
+import DocRouterviewSlide from '@/pages/doc/DocRouterviewSlide'
+import DocTab1 from '@/pages/doc/DocTab1'
+import DocTable1 from '@/pages/doc/DocTable1'
+import DocTable2 from '@/pages/doc/DocTable2'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    // 组件相关
     {
-      path: '/',
-      redirect: '/component/menu1'
+      path: '/(component)?',
+      redirect: '/component/floatBall'
     },
     {
-      path: '/component',
-      redirect: '/component/menu1'
-    },
-    {
-      path: '/component/menu1',
-      name: 'Menu1',
-      component: Menu1
-    },
-    {
-      path: '/component/list1',
-      name: 'List1',
-      component: List1
-    },
-    {
-      path: '/component/nav1',
-      name: 'Nav1',
-      component: Nav1
+      path: '/component/floatBall',
+      name: 'floatBall',
+      component: DocFloatBall
     },
     {
       path: '/component/header1',
-      name: 'Header1',
-      component: Header1
+      name: 'header1',
+      component: DocHeader1
+    },
+    {
+      path: '/component/icon',
+      name: 'icon',
+      component: DocIcon
+    },
+    {
+      path: '/component/list1',
+      name: 'list1',
+      component: DocList1
+    },
+    {
+      path: '/component/menu1',
+      name: 'menu1',
+      component: DocMenu1
+    },
+    {
+      path: '/component/nav1',
+      name: 'nav1',
+      component: DocNav1
+    },
+    {
+      path: '/component/routerviewSlide',
+      name: 'routerviewSlide',
+      component: DocRouterviewSlide
     },
     {
       path: '/component/tab1',
-      name: 'Tab1',
-      component: Tab1
+      name: 'tab1',
+      component: DocTab1
     },
     {
       path: '/component/table1',
-      name: 'Table1',
-      component: Table1
+      name: 'table1',
+      component: DocTable1
+    },
+    {
+      path: '/component/table2',
+      name: 'table2',
+      component: DocTable2
     }
   ]
 })

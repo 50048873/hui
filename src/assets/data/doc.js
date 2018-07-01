@@ -248,6 +248,23 @@ const table1 = {
   ]
 }
 
+const table2 = {
+  example: [
+    {
+      data: {
+        searchQuery: 'c',
+        gridColumns: ['name', 'power'],
+        gridData: [
+          { name: 'Chuck Norris', power: Infinity },
+          { name: 'Bruce Lee', power: 9000 },
+          { name: 'Jackie Chan', power: 7000 },
+          { name: 'Jet Li', power: 8000 }
+        ]
+      }
+    }
+  ]
+}
+
 export default [
   {
     id: 'menu1',
@@ -642,6 +659,138 @@ export default [
           </script>
         `,
         data: table1.example[0].data
+      }
+    ]
+  },
+  {
+    id: 'table2',
+    title: '表格2（table2）',
+    titleDes: '常用于移动端的基础表格',
+    attrs: [
+      {
+        attr: 'data',
+        des: '表格tbody数据',
+        type: 'Array',
+        optional: '—',
+        default: '—'
+      },
+      {
+        attr: 'columns',
+        des: '表格thead数据',
+        type: 'Array',
+        optional: '—',
+        default: '—'
+      },
+      {
+        attr: 'filterKey',
+        des: '默认过滤值',
+        type: 'String',
+        optional: '—',
+        default: '—'
+      }
+    ],
+    events: null,
+    example: [
+      {
+        title: '基础用法',
+        titleDes: '基础的、简洁的表格',
+        code: `
+          <template>
+            <form class="search">
+              <span>搜索：</span>
+              <input name="query" v-model="searchQuery" placeholder="请输入查询字符串">
+            </form>
+            <HuiTable2
+              :data="item.data.gridData"
+              :columns="item.data.gridColumns"
+              :filter-key="searchQuery">
+            </HuiTable2>
+          </template>
+
+          <script>
+          export default {
+            data () {
+              return {
+                data: ${JSON.stringify(table2.example[0].data, null, 2)}
+              }
+            }
+          }
+          </script>
+        `,
+        data: table2.example[0].data
+      }
+    ]
+  },
+  {
+    id: 'floatBall',
+    title: '浮动球',
+    titleDes: '仅用于移动端的辅助操作，在移动端上可移动',
+    attrs: [
+      {
+        attr: 'iconClass',
+        des: '小球里要显示的字体图标类名',
+        type: 'String',
+        optional: '—',
+        default: '—'
+      },
+      {
+        attr: 'top',
+        des: '小球距上面的位置',
+        type: 'String, Number',
+        optional: '—',
+        default: '—'
+      },
+      {
+        attr: 'right',
+        des: '小球距右面的位置',
+        type: 'String, Number',
+        optional: '—',
+        default: '—'
+      },
+      {
+        attr: 'bottom',
+        des: '小球距下面的位置',
+        type: 'String, Number',
+        optional: '—',
+        default: '—'
+      },
+      {
+        attr: 'left',
+        des: '小球距左面的位置',
+        type: 'String, Number',
+        optional: '—',
+        default: '—'
+      }
+    ],
+    events: [
+      {
+        attr: 'ball-click',
+        des: '小球被单击时触发',
+        callbackParam: '(iconClass)'
+      }
+    ],
+    example: [
+      {
+        title: '基础用法',
+        titleDes: '传入字体图标类名',
+        code: `
+          <template>
+            <hui-float-ball right="15" bottom="15" iconClass="hui-icon-wind"></hui-float-ball>
+          </template>
+        `,
+        data: null
+      },
+      {
+        title: '其它用法',
+        titleDes: '传入子元素',
+        code: `
+          <template>
+            <hui-float-ball right="15" bottom="15">
+              <hui-icon-normal-explain class="iconExplain"></hui-icon-normal-explain>
+            </hui-float-ball>
+          </template>
+        `,
+        data: null
       }
     ]
   }

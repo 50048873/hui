@@ -1,6 +1,8 @@
 <template>
   <section class="Example" v-if="code">
-    <slot></slot>
+    <div class="slotWrap">
+      <slot></slot>
+    </div>
     <div @click="toggleCode" class="toggleCode" v-show="isCode">{{btnText}}</div>
     <pre v-show="isCode" class="pre">{{code}}</pre>
     <div @click="toggleCode" class="toggleCode">{{btnText}}</div>
@@ -34,8 +36,12 @@ export default {
 <style scoped lang="less">
   @import '../../assets/less/variable.less';
   .Example {
+    position: relative;
     border: 1px solid #d8d8d8;
     margin-bottom: @margin-large;
+    .slotWrap {
+      padding: 15px;
+    }
     .pre {
       padding: 15px;
       background-color: #fafafa;

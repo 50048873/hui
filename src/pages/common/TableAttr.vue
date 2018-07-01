@@ -41,7 +41,7 @@ export default {
         }
       ]
       let res = data.filter((item) => {
-        return item.id === this.$route.name.toLowerCase()
+        return item.id.toLowerCase() === this.$route.name.toLowerCase()
       })
       this.attrs = res[0].attrs
     }

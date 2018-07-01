@@ -5,14 +5,10 @@
 </template>
 
 <script>
-import HuiNav1 from '@/components/HuiNav1/HuiNav1'
 import data from './HuiNav1'
 
 export default {
   name: 'navLeft',
-  components: {
-    HuiNav1
-  },
   created () {
     this.data = data
   }
