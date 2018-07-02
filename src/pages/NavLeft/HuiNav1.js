@@ -44,6 +44,10 @@ export default [
         to: '/component/nav1'
       },
       {
+        title: '导航2',
+        to: '/component/nav2'
+      },
+      {
         title: 'router-view（slide动画）',
         to: '/component/routerviewSlide'
       },

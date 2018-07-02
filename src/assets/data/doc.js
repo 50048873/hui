@@ -174,35 +174,35 @@ const nav1 = {
     {
       data: [
         {
-          title: '开发指南',
+          title: '导航1',
           children: [
             {
-              title: '更新日志',
+              title: '导航1-1',
               to: '/component/changelog'
             },
             {
-              title: '安装',
+              title: '导航1-2',
               to: '/component/installation'
             },
             {
-              title: '自定义主题',
+              title: '导航1-3',
               to: '/component/custom-theme'
             }
           ]
         },
         {
-          title: '组件',
+          title: '导航2',
           children: [
             {
-              title: '菜单1',
+              title: '导航2-1',
               to: '/component/menu1'
             },
             {
-              title: '列表1',
+              title: '导航2-2',
               to: '/component/list1'
             },
             {
-              title: '导航1',
+              title: '导航2-3',
               to: '/component/nav1'
             }
           ]
