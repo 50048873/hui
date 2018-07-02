@@ -18,8 +18,10 @@
       <Title title="动画图标" des="这是一套带动画的svg图标集合"></Title>
       <ul class="iconList clearfix">
         <li><hui-icon-animated-rain></hui-icon-animated-rain></li>
-        <li><hui-icon-animated-water></hui-icon-animated-water></li>
         <li><hui-icon-animated-wind></hui-icon-animated-wind></li>
+        <li><hui-icon-animated-water></hui-icon-animated-water></li>
+        <li><hui-icon-animated-water2></hui-icon-animated-water2></li>
+        <li><hui-icon-animated-water3></hui-icon-animated-water3></li>
       </ul>
       <Title title="动画图标使用方法" des="直接在页面加入相应的组件，例如："></Title>
       <Example :code="code2" class="iconExample">

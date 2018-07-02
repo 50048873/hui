@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import {iconProps} from '@/assets/js/mixin'
+import {iconProps} from '../mixin'
 export default {
   name: 'HuiIconAnimatedWind',
   mixins: [iconProps]
