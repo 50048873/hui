@@ -4,35 +4,35 @@ const menu1 = {
       data: [
         {
           title: '水情',
-          iconCls: 'fa fa-bath',
+          iconCls: 'hui-lock',
           to: '/sq',
           backgroundColor: 'red'
         },
         {
           title: '雨情',
-          iconCls: 'fa fa-bath',
+          iconCls: 'hui-lock',
           to: 'yq',
           backgroundColor: 'green'
         },
         {
           title: '风情',
-          iconCls: 'fa fa-bath',
+          iconCls: 'hui-lock',
           to: '/fq',
           backgroundColor: 'blue'
         },
         {
           title: '水情',
-          iconCls: 'fa fa-bath',
+          iconCls: 'hui-lock',
           to: '/sq'
         },
         {
           title: '雨情',
-          iconCls: 'fa fa-bath',
+          iconCls: 'hui-lock',
           to: 'yq'
         },
         {
           title: '风情',
-          iconCls: 'fa fa-bath',
+          iconCls: 'hui-lock',
           to: '/fq'
         }
       ]
@@ -48,6 +48,7 @@ const list1 = {
           title: '中宁站',
           time: '2018-06-13 14:22',
           status: 1,
+          timeType: 1,
           children: [
             {
               title: '水位',
@@ -65,6 +66,7 @@ const list1 = {
           title: '红堡寺站',
           time: '2018-06-13 14:22',
           status: 1,
+          timeType: 1,
           children: [
             {
               title: '水位',
@@ -81,6 +83,7 @@ const list1 = {
         {
           title: '河西镇',
           time: '2018-06-13 14:22',
+          timeType: 0,
           children: [
             {
               title: '水位',
@@ -103,6 +106,7 @@ const list1 = {
           title: '中宁站',
           time: '2018-06-13 14:22',
           status: 1,
+          timeType: 1,
           children: [
             {
               title: '水位',
@@ -124,6 +128,7 @@ const list1 = {
         {
           title: '红堡寺站',
           time: '2018-06-13 14:22',
+          timeType: 0,
           children: [
             {
               title: '水位',
@@ -145,6 +150,7 @@ const list1 = {
         {
           title: '河西镇',
           time: '2018-06-13 14:22',
+          timeType: 0,
           children: [
             {
               title: '水位',

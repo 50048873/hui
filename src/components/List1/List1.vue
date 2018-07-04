@@ -1,11 +1,12 @@
 <template>
   <ul :class="theme" v-if="data.length">
     <li v-for="(item, index) in data" :key="index" @click="listClick(item, index)" :class="getWarnCls(item.status)">
+      <div class="iconWrap" v-if="theme === 'HuiList1-theme2' && item.status === 1"><i class="hui-bell"></i></div>
       <div class="line">
         <span class="line-item">
           <em class="title">{{item.title}}</em>
         </span>
-        <span class="line-item time">
+        <span class="line-item time" :class="getTimeWarn(item.timeType)">
           <em>{{item.time}}</em>
         </span>
       </div>
@@ -23,7 +24,6 @@
 <script>
 export default {
   name: 'HuiList1',
-  componentName: 'HuiList1',
   props: {
     data: {
       type: Array,
@@ -40,6 +40,9 @@ export default {
     getWarnCls (status) {
       return status === 1 ? 'WARN' : ''
     },
+    getTimeWarn (timeType) {
+      return timeType === 1 ? 'WARN' : ''
+    },
     listClick (item, index) {
       this.$emit('list-click', item, index)
     }
@@ -49,7 +52,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-  @import './font/style.css';
   .HuiList1-theme1 {
     li {
       padding: 10px;
@@ -87,6 +89,9 @@ export default {
         }
         .time {
           text-align: right;
+          &.WARN {
+            color: red;
+          }
         }
       }
       &.WARN {
@@ -122,6 +127,9 @@ export default {
         }
         .time {
           text-align: right;
+          &.WARN {
+            color: red;
+          }
         }
       }
       &.WARN {
@@ -133,21 +141,23 @@ export default {
             color: red;
           }
         }
-        &:before {
-          content: '\e900';
+        .iconWrap {
           position: absolute;
           top: 50%;
           left: 0;
           width: 34px;
           height: 34px;
           margin-left: -17px;
-          line-height: 34px;
-          text-align: center;
           color: white;
-          font-size: 16px;
           border-radius: 50%;
           background-color: red;
           transform: translateY(-50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .hui-bell {
+            font-size: 18px;
+          }
         }
       }
     }

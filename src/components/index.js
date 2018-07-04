@@ -1,29 +1,91 @@
 import Vue from 'vue'
-import HAlert from './alert/src/main.vue'
-import HProgress from './progress/src/main.vue'
+import useIcon from './Icon/index.js'
+import FloatBall from './FloatBall/FloatBall.vue'
+import Header1 from './Header1/Header1.vue'
+import List1 from './List1/List1.vue'
+import Menu1 from './Menu1/Menu1.vue'
+import Nav1 from './Nav1/Nav1.vue'
+import Tab1 from './Tab1/Tab1.vue'
+import Table1 from './Table1/Table1.vue'
+import TableColumn from './Table1/TableColumn.vue'
+import Table2 from './Table2/Table2.vue'
 
-const alert = {
+// 有两个问题：1.vue组件里的css被打包到了js里；2.下面的less不能通过webpack.pack.config.js打包到指定目录
+// import '@/assets/less/base.less'
+// import '@/assets/font-hui/style.css'
+
+const floatBall = {
   install: function (Vue) {
-    Vue.component(HAlert.name, HAlert)
+    Vue.component(FloatBall.name, FloatBall)
   }
-};
-
-const progress = {
-  install: function (Vue) {
-    Vue.component(HProgress.name, HProgress)
-  }
-};
-
-// 这里的判断很重要
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(alert)
-  window.Vue.use(progress)
 }
 
-const numToWord = function(num) { 
-	return num
+const header1 = {
+  install: function (Vue) {
+    Vue.component(Header1.name, Header1)
+  }
 }
 
-Vue.prototype.$numToWord = numToWord;
+const list1 = {
+  install: function (Vue) {
+    Vue.component(List1.name, List1)
+  }
+}
 
-export {alert, progress, numToWord}
+const menu1 = {
+  install: function (Vue) {
+    Vue.component(Menu1.name, Menu1)
+  }
+}
+
+const nav1 = {
+  install: function (Vue) {
+    Vue.component(Nav1.name, Nav1)
+  }
+}
+
+const tab1 = {
+  install: function (Vue) {
+    Vue.component(Tab1.name, Tab1)
+  }
+}
+
+const table1 = {
+  install: function (Vue) {
+    Vue.component(Table1.name, Table1)
+  }
+}
+
+const tableColumn = {
+  install: function (Vue) {
+    Vue.component(TableColumn.name, TableColumn)
+  }
+}
+
+const table2 = {
+  install: function (Vue) {
+    Vue.component(Table2.name, Table2)
+  }
+}
+
+const numToWord = function (num) {
+  return num.toString()
+}
+
+const all = {
+  install: function (Vue, options) {
+    Vue.component(FloatBall.name, FloatBall)
+    Vue.component(Header1.name, Header1)
+    Vue.component(List1.name, List1)
+    Vue.component(Menu1.name, Menu1)
+    Vue.component(Nav1.name, Nav1)
+    Vue.component(Tab1.name, Tab1)
+    Vue.component(Table1.name, Table1)
+    Vue.component(TableColumn.name, TableColumn)
+    Vue.component(Table2.name, Table2)
+  }
+}
+
+Vue.prototype.$numToWord = numToWord
+
+export {all, useIcon, floatBall, header1, list1, menu1, nav1, tab1, table1, tableColumn, table2}

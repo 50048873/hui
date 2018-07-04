@@ -3,6 +3,7 @@ import FloatBall from '@/components/FloatBall/'
 import Icon from '@/components/Icon/'
 import Header1 from '@/components/Header1'
 import List1 from '@/components/List1'
+import List2 from '@/components/List2'
 import Menu1 from '@/components/Menu1'
 import Nav1 from '@/components/Nav1'
 import Nav2 from '@/components/Nav2'
@@ -16,6 +17,7 @@ export default () => {
   Vue.use(Icon)
   Vue.use(Header1)
   Vue.use(List1)
+  Vue.use(List2)
   Vue.use(Menu1)
   Vue.use(Nav1)
   Vue.use(Nav2)

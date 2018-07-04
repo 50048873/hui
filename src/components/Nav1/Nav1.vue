@@ -29,7 +29,6 @@
 <script>
 export default {
   name: 'HuiNav1',
-  componentName: 'HuiNav1',
   props: {
     data: {
       type: Array,

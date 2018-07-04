@@ -3,16 +3,24 @@ export default [
     title: '开发指南',
     children: [
       {
+        title: '开发打包',
+        to: '/developerGuide/pack'
+      },
+      {
         title: '更新日志',
-        to: '/component/changelog'
+        to: '/developerGuide/changelog'
       },
       {
         title: '安装',
-        to: '/component/installation'
+        to: '/developerGuide/installation'
+      },
+      {
+        title: '快速上手',
+        to: '/developerGuide/quickstart'
       },
       {
         title: '自定义主题',
-        to: '/component/custom-theme'
+        to: '/developerGuide/customTheme'
       }
     ]
   },
@@ -34,6 +42,10 @@ export default [
       {
         title: '列表1',
         to: '/component/list1'
+      },
+      {
+        title: '列表2',
+        to: '/component/list2'
       },
       {
         title: '菜单1',

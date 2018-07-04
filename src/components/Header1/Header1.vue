@@ -13,11 +13,10 @@
 <script>
 export default {
   name: 'HuiHeader1',
-  componentName: 'HuiHeader1',
   props: {
     iconLeft: {
       type: String,
-      default: 'fa fa-angle-left'
+      default: 'hui-back'
     },
     title: {
       type: String,

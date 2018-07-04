@@ -24,7 +24,6 @@
 <script>
 export default {
   name: 'HuiMenu1',
-  componentName: 'HuiMenu1',
   props: {
     data: {
       type: Array,

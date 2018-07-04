@@ -1,7 +1,7 @@
 <template>
   <div class="Title" :class="theme">
-    <h5 class="title" :style="getFontSize">{{title}}</h5>
-    <p class="des" v-if="des">{{des}}</p>
+    <h5 class="title" :style="getFontSize" v-html="title"></h5>
+    <p class="des" v-if="des" v-html="des"></p>
   </div>
 </template>
 
@@ -69,6 +69,17 @@ export default {
         height: 60%;
         background-color: @color-theme;
       }
+    }
+  }
+</style>
+
+<style lang="less">
+  @import '../../assets/less/variable.less';
+  .Title a {
+    color: @color-theme;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
     }
   }
 </style>

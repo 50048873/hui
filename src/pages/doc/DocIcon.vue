@@ -34,15 +34,73 @@
     <div>
       <Title title="使用方法" des="直接通过设置类名为 hui-icon-iconName 来使用即可。例如："></Title>
       <Example :code="code1" class="iconExample">
-        <hui-icon-normal-explain></hui-icon-normal-explain>
-        <hui-icon-normal-wind iconColor="#606266" width="2em" height="2em"></hui-icon-normal-wind>
+        <i class="hui-lock"></i>
+        <i class="hui-eye"></i>
       </Example>
 
-      <Title title="字体图标集合" des="这是一套常规字体图标集合"></Title>
-      <ul class="iconList clearfix">
-        <li><hui-icon-normal-explain></hui-icon-normal-explain></li>
-        <li><hui-icon-normal-wind></hui-icon-normal-wind></li>
-      </ul>
+      <Title title="字体图标集合" des="这是一套常规<a href='/static/font-hui/demo.html' target='_blank'>字体图标</a>集合"></Title>
+      <iframe src="/static/font-hui/demo.html"></iframe>
+      <!-- <ul class="iconList clearfix">
+        <i class="hui-bell"></i>
+        <i class="hui-cancel"></i>
+        <i class="hui-exclamation-mark"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-lock"></i>
+        <i class="hui-square"></i>
+        <i class="hui-square-o"></i>
+        <i class="hui-user"></i>
+        <i class="hui-close"></i>
+        <i class="hui-trumpet"></i>
+        <i class="hui-yc"></i>
+        <i class="hui-zc"></i>
+        <i class="hui-list"></i>
+        <i class="hui-map"></i>
+        <i class="hui-oa"></i>
+        <i class="hui-gcgl"></i>
+        <i class="hui-kfys"></i>
+        <i class="hui-kjcx"></i>
+        <i class="hui-me"></i>
+        <i class="hui-skgl"></i>
+        <i class="hui-sqyb"></i>
+        <i class="hui-szgl"></i>
+        <i class="hui-szygl"></i>
+        <i class="hui-txl"></i>
+        <i class="hui-xx"></i>
+        <i class="hui-zhgl"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+        <i class="hui-eye"></i>
+      </ul> -->
     </div>
   </section>
 </template>
@@ -93,6 +151,11 @@ export default {
         width: 36px;
         height: 36px;
       }
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #d8d8d8;
     }
   }
 </style>

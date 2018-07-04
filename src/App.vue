@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style lang="less">
+  @import './assets/less/variable.less';
   #app {
     max-width: 1000px;
     margin: 0 auto;
@@ -31,6 +32,31 @@ export default {
       }
       .content {
         flex: 1;
+      }
+    }
+    .preWrap {
+      border: 1px solid #d8d8d8;
+      margin-bottom: @margin-large;
+      pre {
+        padding: 15px;
+        background-color: #fafafa;
+        max-width: 100%;
+      }
+    }
+    .likePreWrap {
+      border: 1px solid #d8d8d8;
+      padding: 15px;
+      background-color: #fafafa;
+      h6 {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      p {
+        line-height: 1.8;
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
