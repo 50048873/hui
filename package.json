@@ -13,7 +13,8 @@
     "lint-fix": "eslint --fix --ext .js,.vue src",
     "precommit": "git add -A && npm run lint-fix",
     "build": "node build/build.js",
-    "pack": "cross-env NODE_ENV=production webpack --progress --config ./webpack.pack.config.js --hide-modules"
+    "pack": "cross-env NODE_ENV=production webpack --progress --config ./webpack.pack.config.js --hide-modules",
+    "testPack": "cross-env NODE_ENV=production webpack --progress --config ./webpack.testPack.config.js --hide-modules"
   },
   "files": [
     "lib",
@@ -35,9 +36,9 @@
     "babel-plugin-transform-vue-jsx": "^3.5.0",
     "babel-preset-env": "^1.3.2",
     "babel-preset-stage-2": "^6.22.0",
-    "cross-env": "^5.0.5",
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.0.5",
     "css-loader": "^0.28.0",
     "eslint": "^4.15.0",
     "eslint-config-standard": "^10.2.1",

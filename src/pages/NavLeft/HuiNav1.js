@@ -28,6 +28,10 @@ export default [
     title: '组件',
     children: [
       {
+        title: '对话框',
+        to: '/component/dialog'
+      },
+      {
         title: '浮动球',
         to: '/component/floatBall'
       },
@@ -58,6 +62,14 @@ export default [
       {
         title: '导航2',
         to: '/component/nav2'
+      },
+      {
+        title: '上拉刷新',
+        to: '/component/pullupRefresh'
+      },
+      {
+        title: '下拉加载',
+        to: '/component/pulldownLoad'
       },
       {
         title: 'router-view（slide动画）',

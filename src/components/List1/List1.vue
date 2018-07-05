@@ -1,7 +1,7 @@
 <template>
   <ul :class="theme" v-if="data.length">
     <li v-for="(item, index) in data" :key="index" @click="listClick(item, index)" :class="getWarnCls(item.status)">
-      <div class="iconWrap" v-if="theme === 'HuiList1-theme2' && item.status === 1"><i class="hui-bell"></i></div>
+      <div class="iconWrap" v-if="theme === 'HuiList1-theme2' && item.status === 1" @click.stop="warnClick(item, index)"><i class="hui-bell"></i></div>
       <div class="line">
         <span class="line-item">
           <em class="title">{{item.title}}</em>
@@ -45,6 +45,9 @@ export default {
     },
     listClick (item, index) {
       this.$emit('list-click', item, index)
+    },
+    warnClick (item, index) {
+      this.$emit('warn-click', item, index)
     }
   }
 }

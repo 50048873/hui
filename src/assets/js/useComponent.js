@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Dialog from '@/components/Dialog/'
 import FloatBall from '@/components/FloatBall/'
 import Icon from '@/components/Icon/'
 import Header1 from '@/components/Header1'
@@ -13,6 +14,7 @@ import Table1 from '@/components/Table1'
 import Table2 from '@/components/Table2'
 
 export default () => {
+  Vue.use(Dialog)
   Vue.use(FloatBall)
   Vue.use(Icon)
   Vue.use(Header1)

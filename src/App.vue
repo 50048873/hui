@@ -50,13 +50,13 @@ export default {
       h6 {
         font-size: 16px;
         font-weight: bold;
+        margin: 10px 0;
+        &:first-child {
+          margin-top: 0;
+        }
       }
       p {
         line-height: 1.8;
-        margin-bottom: 15px;
-        &:last-child {
-          margin-bottom: 0;
-        }
       }
     }
   }

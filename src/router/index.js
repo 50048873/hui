@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import DocDialog from '@/pages/doc/DocDialog'
 import DocFloatBall from '@/pages/doc/DocFloatBall'
 import DocHeader1 from '@/pages/doc/DocHeader1'
 import DocIcon from '@/pages/doc/DocIcon'
@@ -54,10 +55,11 @@ export default new Router({
       component: DeveloperGuideCustomTheme
     },
     // 组件相关
-    // {
-    //   path: '/(component)?',
-    //   redirect: '/component/floatBall'
-    // },
+    {
+      path: '/component/dialog',
+      name: 'dialog',
+      component: DocDialog
+    },
     {
       path: '/component/floatBall',
       name: 'floatBall',
