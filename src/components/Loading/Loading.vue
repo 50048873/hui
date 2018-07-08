@@ -36,7 +36,6 @@
 
 @keyframes sk-rotate { 100% { transform: rotate(360deg); }}
 
-
 @keyframes sk-bounce {
   0%, 100% {
     transform: scale(0.0);
@@ -45,4 +44,3 @@
   }
 }
 </style>
-
