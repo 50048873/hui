@@ -6,6 +6,7 @@ import Header1 from '@/components/Header1'
 import List1 from '@/components/List1'
 import List2 from '@/components/List2'
 import Menu1 from '@/components/Menu1'
+import Message from '@/components/Message'
 import Nav1 from '@/components/Nav1'
 import Nav2 from '@/components/Nav2'
 import RouterviewSlide from '@/components/RouterviewSlide'
@@ -21,6 +22,7 @@ export default () => {
   Vue.use(List1)
   Vue.use(List2)
   Vue.use(Menu1)
+  Vue.use(Message)
   Vue.use(Nav1)
   Vue.use(Nav2)
   Vue.use(RouterviewSlide)

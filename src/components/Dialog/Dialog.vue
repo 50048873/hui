@@ -1,13 +1,13 @@
 <template>
-  <transition name="fade">
-    <div class="HuiDialog-default HuiDialog-theme1" v-if="isVisible">
-      <div class="huiDialog-mask"></div>
-      <div class="huiDialog-dialog">
-        <div class="huiDialog-dialog__hd"><strong class="huiDialog-dialog__title">{{title}}</strong></div>
-        <div class="huiDialog-dialog__bd"><slot></slot></div>
-        <div class="huiDialog-dialog__ft">
-            <a href="javascript:;" class="huiDialog-dialog__btn huiDialog-dialog__btn_default">{{btn1}}</a>
-            <a href="javascript:;" class="huiDialog-dialog__btn huiDialog-dialog__btn_primary">{{btn2}}</a>
+  <transition name="hui-fade" @after-leave="afterLeave">
+    <div class="HuiDialog-default HuiDialog-theme1" :class="customClass" v-show="visible">
+      <div class="huiDialog-mask" v-show="modal" @click="closeModal"></div>
+      <div class="huiDialog-dialog" :style="dialogStyle">
+        <div class="huiDialog-hd"><strong class="huiDialog-title">{{title}}</strong></div>
+        <div class="huiDialog-bd"><slot></slot></div>
+        <div class="huiDialog-ft">
+          <a class="huiDialog-btn huiDialog-btn_default" @click.prevent="close" v-if="cancel">{{cancel}}</a>
+          <a class="huiDialog-btn huiDialog-btn_primary" @click.prevent="close">{{confirm}}</a>
         </div>
       </div>
     </div>
@@ -18,41 +18,92 @@
 export default {
   name: 'HuiDialog',
   props: {
-    isVisible: {
+    visible: {
       type: Boolean,
       default: false
     },
     title: {
       type: String,
-      default: '标题'
+      default: '',
+      required: true
     },
-    btn1: {
+    width: {
       type: String,
-      default: '取消'
+      default: '50%'
     },
-    btn2: {
+    closeOnClickModal: {
+      type: Boolean,
+      default: true
+    },
+    modal: {
+      type: Boolean,
+      default: true
+    },
+    customClass: {
       type: String,
-      default: '确定'
+      default: ''
+    },
+    cancel: {
+      type: String
+    },
+    confirm: {
+      type: String,
+      default: '确认'
+    },
+    beforeClose: Function
+  },
+  data () {
+    return {
+      closed: false
+    }
+  },
+  computed: {
+    dialogStyle () {
+      if (this.width) {
+        return {
+          width: this.width
+        }
+      }
     }
   },
   methods: {
-    show () {
-      this.isVisible = true
+    closeModal () {
+      if (this.closeOnClickModal) {
+        this.close()
+      }
     },
-    remove () {
-      this.isVisible = false
+    close () {
+      if (typeof this.beforeClose === 'function') {
+        this.beforeClose(this.hide)
+      } else {
+        this.hide()
+      }
+    },
+    hide (cancel) {
+      if (cancel !== false) {
+        this.$emit('update:visible', false)
+        this.$emit('close')
+        this.closed = true
+      }
+    },
+    afterLeave () {
+      this.$emit('closed')
+    }
+  },
+  watch: {
+    visible (newVal) {
+      if (newVal) {
+        this.$emit('open')
+      } else if (!this.closed) {
+        this.$emit('close')
+      }
     }
   }
 }
 </script>
 
 <style scoped lang="less">
-  .fade-enter, .fade-leave-to {
-    opacity: 0;
-  }
   .HuiDialog-default {
-    transition: all 0.4s;
-    opacity: 1;
     .huiDialog-mask {
       position: fixed;
       z-index: 1000;
@@ -65,25 +116,23 @@ export default {
     .huiDialog-dialog {
       position: fixed;
       z-index: 5000;
-      width: 80%;
-      max-width: 300px;
+      // width: 50%;
       top: 50%;
       left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
       background-color: #FFFFFF;
       text-align: center;
       border-radius: 3px;
       overflow: hidden;
     }
-    .huiDialog-dialog__hd {
+    .huiDialog-hd {
       padding: 1.3em 1.6em 0.5em;
     }
-    .huiDialog-dialog__title {
+    .huiDialog-title {
       font-weight: 400;
       font-size: 18px;
     }
-    .huiDialog-dialog__bd {
+    .huiDialog-bd {
       padding: 0 1.6em 0.8em;
       min-height: 40px;
       font-size: 15px;
@@ -92,19 +141,18 @@ export default {
       word-break: break-all;
       color: #999999;
     }
-    .huiDialog-dialog__bd:first-child {
+    .huiDialog-bd:first-child {
       padding: 2.7em 20px 1.7em;
       color: #353535;
     }
-    .huiDialog-dialog__ft {
+    .huiDialog-ft {
       position: relative;
       line-height: 48px;
       font-size: 18px;
       display: -webkit-box;
-      display: -webkit-flex;
       display: flex;
     }
-    .huiDialog-dialog__ft:after {
+    .huiDialog-ft:after {
       content: " ";
       position: absolute;
       left: 0;
@@ -113,25 +161,23 @@ export default {
       height: 1px;
       border-top: 1px solid #D5D5D6;
       color: #D5D5D6;
-      -webkit-transform-origin: 0 0;
-              transform-origin: 0 0;
-      -webkit-transform: scaleY(0.5);
-              transform: scaleY(0.5);
+      transform-origin: 0 0;
+      transform: scaleY(0.5);
     }
-    .huiDialog-dialog__btn {
+    .huiDialog-btn {
       display: block;
       -webkit-box-flex: 1;
-      -webkit-flex: 1;
-              flex: 1;
+      flex: 1;
       color: #3CC51F;
       text-decoration: none;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       position: relative;
+      cursor: pointer;
     }
-    .huiDialog-dialog__btn:active {
+    .huiDialog-btn:active {
       background-color: #EEEEEE;
     }
-    .huiDialog-dialog__btn:after {
+    .huiDialog-btn:after {
       content: " ";
       position: absolute;
       left: 0;
@@ -140,18 +186,16 @@ export default {
       bottom: 0;
       border-left: 1px solid #D5D5D6;
       color: #D5D5D6;
-      -webkit-transform-origin: 0 0;
-              transform-origin: 0 0;
-      -webkit-transform: scaleX(0.5);
-              transform: scaleX(0.5);
+      transform-origin: 0 0;
+      transform: scaleX(0.5);
     }
-    .huiDialog-dialog__btn:first-child:after {
+    .huiDialog-btn:first-child:after {
       display: none;
     }
-    .huiDialog-dialog__btn_default {
+    .huiDialog-btn_default {
       color: #353535;
     }
-    .huiDialog-dialog__btn_primary {
+    .huiDialog-btn_primary {
       color: #0BB20C;
     }
   }
@@ -160,50 +204,51 @@ export default {
       text-align: left;
       box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
     }
-    .huiDialog-dialog__title {
+    .huiDialog-title {
       font-size: 21px;
     }
-    .huiDialog-dialog__hd {
+    .huiDialog-hd {
       text-align: left;
+      padding: 1.3em 1.8em 0.5em;
     }
-    .huiDialog-dialog__bd {
+    .huiDialog-bd {
       color: #999999;
       padding: 0.25em 1.6em 2em;
       font-size: 17px;
       text-align: left;
     }
-    .huiDialog-dialog__bd:first-child {
+    .huiDialog-bd:first-child {
       padding: 1.6em 1.6em 2em;
       color: #353535;
     }
-    .huiDialog-dialog__ft {
+    .huiDialog-ft {
       display: block;
       text-align: right;
       line-height: 42px;
       font-size: 16px;
       padding: 0 1.6em 0.7em;
     }
-    .huiDialog-dialog__ft:after {
+    .huiDialog-ft:after {
       display: none;
     }
-    .huiDialog-dialog__btn {
+    .huiDialog-btn {
       display: inline-block;
       vertical-align: top;
       padding: 0 .8em;
     }
-    .huiDialog-dialog__btn:after {
+    .huiDialog-btn:after {
       display: none;
     }
-    .huiDialog-dialog__btn:active {
+    .huiDialog-btn:active {
       background-color: rgba(0, 0, 0, 0.06);
     }
-    .huiDialog-dialog__btn:visited {
+    .huiDialog-btn:visited {
       background-color: rgba(0, 0, 0, 0.06);
     }
-    .huiDialog-dialog__btn:last-child {
+    .huiDialog-btn:last-child {
       margin-right: -0.8em;
     }
-    .huiDialog-dialog__btn_default {
+    .huiDialog-btn_default {
       color: #808080;
     }
   }

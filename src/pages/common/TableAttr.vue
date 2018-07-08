@@ -1,5 +1,5 @@
 <template>
-  <table class="Table">
+  <table class="docTable">
     <thead>
       <tr>
         <th v-for="(item, index) in attrHead" :key="index">{{item.title}}</th>
@@ -51,3 +51,24 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+  @import '../../assets/less/variable.less';
+  .docTable {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: @margin-large;
+    line-height: 1.5;
+    th {
+      text-align: left;
+      white-space: nowrap;
+      font-weight: 700;
+      border-bottom: 1px solid #d8d8d8;
+      padding: 15px;
+      max-width: 250px;
+    }
+    td {
+      padding: 10px;
+    }
+  }
+</style>

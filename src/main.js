@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 
 import '@/assets/less/base.less'
-import '@/assets/font-hui/style.css'
+import '../static/font-hui/style.css'
 
 import useComponent from '@/assets/js/useComponent'
 import usePagesCommon from '@/assets/js/usePagesCommon'

@@ -56,6 +56,10 @@ export default [
         to: '/component/menu1'
       },
       {
+        title: '消息提示',
+        to: '/component/message'
+      },
+      {
         title: '导航1',
         to: '/component/nav1'
       },

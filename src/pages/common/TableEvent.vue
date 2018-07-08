@@ -1,5 +1,5 @@
 <template>
-  <table class="Table">
+  <table class="docTable">
     <thead>
       <tr>
         <th v-for="(item, index) in eventHead" :key="index">{{item.title}}</th>
@@ -18,7 +18,7 @@
 <script>
 import data from '@/assets/data/doc'
 export default {
-  name: 'Table',
+  name: 'TableEvent',
   methods: {
     initSingleDirectionData () {
       this.eventHead = [

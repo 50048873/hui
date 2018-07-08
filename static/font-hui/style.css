@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'font-hui';
   src:
-    url('fonts/font-hui.ttf?xagyys') format('truetype'),
-    url('fonts/font-hui.woff?xagyys') format('woff'),
-    url('fonts/font-hui.svg?xagyys#font-hui') format('svg');
+    url('fonts/font-hui.ttf?3pj4gn') format('truetype'),
+    url('fonts/font-hui.woff?3pj4gn') format('woff'),
+    url('fonts/font-hui.svg?3pj4gn#font-hui') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,6 +23,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.hui-warn:before {
+  content: "\e91b";
+}
+.hui-success:before {
+  content: "\e949";
+}
+.hui-success-no-circle:before {
+  content: "\e94a";
+}
+.hui-warn-no-circle:before {
+  content: "\e94c";
+}
 .hui-bell:before {
   content: "\e900";
 }
@@ -103,9 +115,6 @@
 }
 .hui-zhsw:before {
   content: "\e91a";
-}
-.hui-warn:before {
-  content: "\e91b";
 }
 .hui-info:before {
   content: "\e91c";

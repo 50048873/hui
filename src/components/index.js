@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import useIcon from './Icon/index.js'
+import Dialog from './Dialog/Dialog.vue'
 import FloatBall from './FloatBall/FloatBall.vue'
 import Header1 from './Header1/Header1.vue'
 import List1 from './List1/List1.vue'
@@ -15,6 +16,12 @@ import Table2 from './Table2/Table2.vue'
 // import '@/assets/less/base.less'
 // import '@/assets/font-hui/style.css'
 // import '@/assets/less/hui.css'
+
+const dialog = {
+  install: function (Vue) {
+    Vue.component(Dialog.name, Dialog)
+  }
+}
 
 const floatBall = {
   install: function (Vue) {
@@ -82,6 +89,7 @@ const numToWord = function (num) {
 
 const all = {
   install: function (Vue, options) {
+    Vue.component(Dialog.name, Dialog)
     Vue.component(FloatBall.name, FloatBall)
     Vue.component(Header1.name, Header1)
     Vue.component(List1.name, List1)
@@ -97,4 +105,4 @@ const all = {
 
 Vue.prototype.$numToWord = numToWord
 
-export {all, useIcon, floatBall, header1, list1, menu1, nav1, routerviewSlide, tab1, table1, tableColumn, table2}
+export {all, useIcon, dialog, floatBall, header1, list1, menu1, nav1, routerviewSlide, tab1, table1, tableColumn, table2}

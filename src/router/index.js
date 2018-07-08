@@ -7,6 +7,7 @@ import DocIcon from '@/pages/doc/DocIcon'
 import DocList1 from '@/pages/doc/DocList1'
 import DocList2 from '@/pages/doc/DocList2'
 import DocMenu1 from '@/pages/doc/DocMenu1'
+import DocMessage from '@/pages/doc/DocMessage'
 import DocNav1 from '@/pages/doc/DocNav1'
 import DocNav2 from '@/pages/doc/DocNav2'
 import DocRouterviewSlide from '@/pages/doc/DocRouterviewSlide'
@@ -89,6 +90,11 @@ export default new Router({
       path: '/component/menu1',
       name: 'menu1',
       component: DocMenu1
+    },
+    {
+      path: '/component/message',
+      name: 'message',
+      component: DocMessage
     },
     {
       path: '/component/nav1',
