@@ -1,5 +1,4 @@
-import useIcon from './Icon'
-
+import Icon from './Icon'
 import Dialog from './Dialog'
 import FloatBall from './FloatBall'
 import Header1 from './Header1'
@@ -18,6 +17,7 @@ import Table2 from './Table2'
 // import '@/assets/less/hui.css'
 
 const all = (Vue) => {
+  Vue.use(Icon)
   Vue.use(Dialog)
   Vue.use(FloatBall)
   Vue.use(Header1)
@@ -33,8 +33,7 @@ const all = (Vue) => {
 
 export {
   all,
-  useIcon,
-
+  Icon,
   Dialog,
   FloatBall,
   Header1,

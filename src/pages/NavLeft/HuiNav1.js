@@ -90,6 +90,10 @@ export default [
       {
         title: '表格2',
         to: '/component/table2'
+      },
+      {
+        title: '标签页tabs',
+        to: '/component/tabs'
       }
     ]
   }

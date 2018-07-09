@@ -14,6 +14,7 @@ import DocRouterviewSlide from '@/pages/doc/DocRouterviewSlide'
 import DocTab1 from '@/pages/doc/DocTab1'
 import DocTable1 from '@/pages/doc/DocTable1'
 import DocTable2 from '@/pages/doc/DocTable2'
+import DocTabs from '@/pages/doc/DocTabs'
 
 import DeveloperGuidePack from '@/pages/doc/DeveloperGuidePack'
 import DeveloperGuideChangelog from '@/pages/doc/DeveloperGuideChangelog'
@@ -125,6 +126,11 @@ export default new Router({
       path: '/component/table2',
       name: 'table2',
       component: DocTable2
+    },
+    {
+      path: '/component/tabs',
+      name: 'tabs',
+      component: DocTabs
     }
   ]
 })

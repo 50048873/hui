@@ -8,12 +8,12 @@
         import * as Hui from 'hui' // 引入hui的所有组件
         import 'hui/src/assets/less/hui.css' // 引入hui的公共样式
         import 'hui/src/assets/font-hui/style.css' // 引入hui的字体图标
-        import App from './App.vue';
+        import App from './App.vue'
 
-        Vue.use(Hui.all) // 全局注册所有组件（字体组件除外）
-        Vue.use(Hui.useIcon) // 全局注册所有svg字体组件
+        Vue.use(Hui.all) // 全局注册所有组件
 
         // 下面为单独使用每个组件
+        // Vue.use(Hui.Icon) // 全局注册所有svg字体组件
         // Vue.use(Hui.floatBall)
         // Vue.use(Hui.header1)
         // Vue.use(Hui.list1)
@@ -27,7 +27,7 @@
         new Vue({
           el: '#app',
           render: h => h(App)
-        });
+        })
       </pre>
     </section>
   </div>
