@@ -1,7 +1,7 @@
 import Tabs from './Tabs'
-import TabPane from './TabPane'
+import Tab from './Tab'
 
 export default (Vue) => {
   Vue.component(Tabs.name, Tabs)
-  Vue.component(TabPane.name, TabPane)
+  Vue.component(Tab.name, Tab)
 }

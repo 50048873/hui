@@ -6,19 +6,35 @@ export default {
       type: [String, Number]
     }
   },
-  methods: {
-    a () {
+  provide () {
+    const data = {}
 
+    Object.defineProperty(data, 'value', {
+      get: () => this.value,
+      enumerable: true
+    })
+
+    return {
+      data
     }
   },
   render (h) {
-    let {a} = this
-    console.log(a, this)
+    console.log(this.data)
     return (
       <div class="HuiTabs">
-        {this.$slots.default}
+        <ul class="hui-tabs-header">
+          {this.$slots.default}
+        </ul>
       </div>
     )
   }
 }
 </script>
+
+<style scoped lang="less">
+  .HuiTabs {
+    .hui-tabs-header {
+      font-size: 0;
+    }
+  }
+</style>
