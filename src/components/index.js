@@ -1,108 +1,49 @@
-import Vue from 'vue'
-import useIcon from './Icon/index.js'
-import Dialog from './Dialog/Dialog.vue'
-import FloatBall from './FloatBall/FloatBall.vue'
-import Header1 from './Header1/Header1.vue'
-import List1 from './List1/List1.vue'
-import Menu1 from './Menu1/Menu1.vue'
-import Nav1 from './Nav1/Nav1.vue'
-import RouterviewSlide from './RouterviewSlide/RouterviewSlide.vue'
-import Tab1 from './Tab1/Tab1.vue'
-import Table1 from './Table1/Table1.vue'
-import TableColumn from './Table1/TableColumn.vue'
-import Table2 from './Table2/Table2.vue'
+import useIcon from './Icon'
+
+import Dialog from './Dialog'
+import FloatBall from './FloatBall'
+import Header1 from './Header1'
+import List1 from './List1'
+import Menu1 from './Menu1'
+import Message from './Message'
+import Nav1 from './Nav1'
+import RouterviewSlide from './RouterviewSlide'
+import Tab1 from './Tab1'
+import Table1 from './Table1'
+import Table2 from './Table2'
 
 // 有两个问题：1.vue组件里的css被打包到了js里；2.下面的less不能通过webpack.pack.config.js打包到指定目录
 // import '@/assets/less/base.less'
 // import '@/assets/font-hui/style.css'
 // import '@/assets/less/hui.css'
 
-const dialog = {
-  install: function (Vue) {
-    Vue.component(Dialog.name, Dialog)
-  }
+const all = (Vue) => {
+  Vue.use(Dialog)
+  Vue.use(FloatBall)
+  Vue.use(Header1)
+  Vue.use(List1)
+  Vue.use(Menu1)
+  Vue.use(Message)
+  Vue.use(Nav1)
+  Vue.use(RouterviewSlide)
+  Vue.use(Tab1)
+  Vue.use(Table1)
+  Vue.use(Table2)
 }
 
-const floatBall = {
-  install: function (Vue) {
-    Vue.component(FloatBall.name, FloatBall)
-  }
+export {
+  all,
+  useIcon,
+
+  Dialog,
+  FloatBall,
+  Header1,
+  List1,
+  Menu1,
+  Message,
+  Nav1,
+  RouterviewSlide,
+  Tab1,
+  Table1,
+  Table2
 }
-
-const header1 = {
-  install: function (Vue) {
-    Vue.component(Header1.name, Header1)
-  }
-}
-
-const list1 = {
-  install: function (Vue) {
-    Vue.component(List1.name, List1)
-  }
-}
-
-const menu1 = {
-  install: function (Vue) {
-    Vue.component(Menu1.name, Menu1)
-  }
-}
-
-const nav1 = {
-  install: function (Vue) {
-    Vue.component(Nav1.name, Nav1)
-  }
-}
-
-const routerviewSlide = {
-  install: function (Vue) {
-    Vue.component(RouterviewSlide.name, RouterviewSlide)
-  }
-}
-
-const tab1 = {
-  install: function (Vue) {
-    Vue.component(Tab1.name, Tab1)
-  }
-}
-
-const table1 = {
-  install: function (Vue) {
-    Vue.component(Table1.name, Table1)
-  }
-}
-
-const tableColumn = {
-  install: function (Vue) {
-    Vue.component(TableColumn.name, TableColumn)
-  }
-}
-
-const table2 = {
-  install: function (Vue) {
-    Vue.component(Table2.name, Table2)
-  }
-}
-
-const numToWord = function (num) {
-  return num.toString()
-}
-
-const all = {
-  install: function (Vue, options) {
-    Vue.component(Dialog.name, Dialog)
-    Vue.component(FloatBall.name, FloatBall)
-    Vue.component(Header1.name, Header1)
-    Vue.component(List1.name, List1)
-    Vue.component(Menu1.name, Menu1)
-    Vue.component(Nav1.name, Nav1)
-    Vue.component(RouterviewSlide.name, RouterviewSlide)
-    Vue.component(Tab1.name, Tab1)
-    Vue.component(Table1.name, Table1)
-    Vue.component(TableColumn.name, TableColumn)
-    Vue.component(Table2.name, Table2)
-  }
-}
-
-Vue.prototype.$numToWord = numToWord
-
-export {all, useIcon, dialog, floatBall, header1, list1, menu1, nav1, routerviewSlide, tab1, table1, tableColumn, table2}

@@ -1,7 +1,7 @@
 import Message from './Message.vue'
-import message from './Message.js'
+import MessageClass from './Message.js'
 
 export default (Vue) => {
   Vue.component(Message.name, Message)
-  Vue.prototype.$message = message
+  Vue.prototype.$message = MessageClass
 }

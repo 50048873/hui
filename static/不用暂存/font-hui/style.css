@@ -1,0 +1,253 @@
+@font-face {
+  font-family: 'font-hui';
+  src:
+    url('fonts/font-hui.ttf?3pj4gn') format('truetype'),
+    url('fonts/font-hui.woff?3pj4gn') format('woff'),
+    url('fonts/font-hui.svg?3pj4gn#font-hui') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="hui-"], [class*=" hui-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'font-hui' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hui-warn:before {
+  content: "\e91b";
+}
+.hui-success:before {
+  content: "\e949";
+}
+.hui-success-no-circle:before {
+  content: "\e94a";
+}
+.hui-warn-no-circle:before {
+  content: "\e94c";
+}
+.hui-bell:before {
+  content: "\e900";
+}
+.hui-cancel:before {
+  content: "\e901";
+}
+.hui-exclamation-mark:before {
+  content: "\e902";
+}
+.hui-eye:before {
+  content: "\e903";
+}
+.hui-lock:before {
+  content: "\e904";
+}
+.hui-square:before {
+  content: "\e905";
+}
+.hui-square-o:before {
+  content: "\e906";
+}
+.hui-user:before {
+  content: "\e907";
+}
+.hui-close:before {
+  content: "\e908";
+}
+.hui-trumpet:before {
+  content: "\e909";
+}
+.hui-yc:before {
+  content: "\e90a";
+}
+.hui-zc:before {
+  content: "\e90b";
+}
+.hui-list:before {
+  content: "\e90c";
+}
+.hui-map:before {
+  content: "\e90d";
+}
+.hui-oa:before {
+  content: "\e90e";
+}
+.hui-gcgl:before {
+  content: "\e90f";
+}
+.hui-kfys:before {
+  content: "\e910";
+}
+.hui-kjcx:before {
+  content: "\e911";
+}
+.hui-me:before {
+  content: "\e912";
+}
+.hui-skgl:before {
+  content: "\e913";
+}
+.hui-sqyb:before {
+  content: "\e914";
+}
+.hui-szgl:before {
+  content: "\e915";
+}
+.hui-szygl:before {
+  content: "\e916";
+}
+.hui-txl:before {
+  content: "\e917";
+}
+.hui-xx:before {
+  content: "\e918";
+}
+.hui-zhgl:before {
+  content: "\e919";
+}
+.hui-zhsw:before {
+  content: "\e91a";
+}
+.hui-info:before {
+  content: "\e91c";
+}
+.hui-jbxx:before {
+  content: "\e91d";
+}
+.hui-jc:before {
+  content: "\e91e";
+}
+.hui-member:before {
+  content: "\e91f";
+}
+.hui-path:before {
+  content: "\e920";
+}
+.hui-sksw:before {
+  content: "\e921";
+}
+.hui-xj:before {
+  content: "\e922";
+}
+.hui-phone:before {
+  content: "\e923";
+}
+.hui-add:before {
+  content: "\e924";
+}
+.hui-rgtb:before {
+  content: "\e925";
+}
+.hui-filter:before {
+  content: "\e926";
+}
+.hui-next:before {
+  content: "\e927";
+}
+.hui-play:before {
+  content: "\e928";
+}
+.hui-prev:before {
+  content: "\e929";
+}
+.hui-tzxx:before {
+  content: "\e92a";
+}
+.hui-calendar:before {
+  content: "\e92b";
+}
+.hui-back:before {
+  content: "\e92c";
+}
+.hui-clock:before {
+  content: "\e92d";
+}
+.hui-minus:before {
+  content: "\e92e";
+}
+.hui-search:before {
+  content: "\e92f";
+}
+.hui-circle:before {
+  content: "\e930";
+}
+.hui-jy:before {
+  content: "\e931";
+}
+.hui-jzc:before {
+  content: "\e932";
+}
+.hui-fzze:before {
+  content: "\e933";
+}
+.hui-lrzr:before {
+  content: "\e934";
+}
+.hui-money:before {
+  content: "\e935";
+}
+.hui-tz:before {
+  content: "\e936";
+}
+.hui-sc:before {
+  content: "\e937";
+}
+.hui-kf:before {
+  content: "\e938";
+}
+.hui-gw:before {
+  content: "\e939";
+}
+.hui-dfscb:before {
+  content: "\e93a";
+}
+.hui-dl:before {
+  content: "\e93b";
+}
+.hui-gsl:before {
+  content: "\e93c";
+}
+.hui-snh:before {
+  content: "\e93d";
+}
+.hui-szhgl:before {
+  content: "\e93e";
+}
+.hui-yl:before {
+  content: "\e93f";
+}
+.hui-zlsyh:before {
+  content: "\e940";
+}
+.hui-yshs:before {
+  content: "\e941";
+}
+.hui-ysjgdb:before {
+  content: "\e942";
+}
+.hui-yssssl:before {
+  content: "\e943";
+}
+.hui-xjgd:before {
+  content: "\e944";
+}
+.hui-qxrw:before {
+  content: "\e945";
+}
+.hui-gw2:before {
+  content: "\e946";
+}
+.hui-gjlb:before {
+  content: "\e947";
+}
+.hui-gclb:before {
+  content: "\e948";
+}
