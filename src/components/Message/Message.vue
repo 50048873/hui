@@ -1,6 +1,6 @@
 <template>
   <transition name="hui-fade" @after-leave="afterLeave">
-    <div class="HuiMessage-default" :class="customClass" v-if="visible" @click="close">
+    <div class="HuiMessage-default" :class="customClass" v-if="visible" @click="closeModal">
       <div class="huiMessage-toast__content">
         <i :class="icon" v-if="icon"></i>
         <p class="huiMessage-toast__content">{{content}}</p>
@@ -18,10 +18,6 @@ export default {
       default: false
     },
     closeOnClickModal: {
-      type: Boolean,
-      default: true
-    },
-    modal: {
       type: Boolean,
       default: true
     },

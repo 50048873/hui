@@ -1,12 +1,14 @@
 <template>
   <div>
     <p>提示文档开发中...</p>
-    <button @click="visible=true">打开对话框</button>
+    <button @click="visible=true">组件打开提示框</button>
+    <button @click="message">方法打开提示框</button>
     <hui-message
       :visible.sync="visible"
       @closed="closed"
       content="这是我要显示的内容"
-      time="2000"
+      time="3000"
+      :closeOnClickModal="closeOnClickModal"
       >
     </hui-message>
   </div>
@@ -16,16 +18,26 @@
 export default {
   data () {
     return {
-      visible: false
+      visible: false,
+      closeOnClickModal: true
     }
   },
   methods: {
     closed () {
       console.log('closed')
+    },
+    message () {
+      this.$message({
+        content: '方法内容',
+        time: 2000,
+        customClass: 'aaa',
+        icon: 'hui-success',
+        closeOnClickModal: true,
+        closed: function () {
+          // console.log('closed callback')
+        }
+      })
     }
-  },
-  created () {
-    this.$message({content: '方法内容', visible: true, time: 1000})
   }
 }
 </script>

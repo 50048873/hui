@@ -3,7 +3,7 @@
   <section class="DocIcon">
     <Title title="组件图标" des="提供了一套svg格式的组件图标集合" theme="Title-theme1"></Title>
     <div>
-      <Title title="普通图标" des="这是一套普通的svg图标集合"></Title>
+      <Title title="普通图标" des="这是一套普通的svg图标集合，适合彩色的使用场景"></Title>
       <ul class="iconList clearfix">
         <li><hui-icon-normal-explain></hui-icon-normal-explain></li>
         <li><hui-icon-normal-wind></hui-icon-normal-wind></li>
@@ -30,7 +30,7 @@
       </Example>
     </div>
 
-    <Title title="字体图标" des="提供了一套字体图标集合" theme="Title-theme1"></Title>
+    <Title title="字体图标" des="提供了一套字体图标集合，适合单色的使用场景" theme="Title-theme1"></Title>
     <div>
       <Title title="使用方法" des="直接通过设置类名为 hui-icon-iconName 来使用即可。例如："></Title>
       <Example :code="code1" class="iconExample">
