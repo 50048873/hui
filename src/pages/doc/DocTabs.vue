@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>tabs文档开发中...</p>
-    <hui-tabs :value="value">
+    <hui-tabs :current.sync="current">
       <hui-tab label="标签1" index="1">
         <span slot="label">查抄标签</span>
         <div>内容1</div>
@@ -17,12 +17,12 @@
 export default {
   data () {
     return {
-      value: '1'
+      current: '1'
     }
   },
   mounted () {
     setTimeout(() => {
-      this.value = '2'
+      this.current = '2'
     }, 2000)
   }
 }

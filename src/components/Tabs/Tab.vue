@@ -14,8 +14,12 @@ export default {
   },
   computed: {
     active () {
-      console.log(this.data)
-      return this.index === this.data.value
+      return this.index === this.data.current
+    }
+  },
+  methods: {
+    tabChange () {
+      this.$parent.updateCurrent(this.index)
     }
   },
   render (h) {
@@ -25,10 +29,13 @@ export default {
       ON: this.active
     }
     return (
-      <li class={HuiTabClass}>
+      <li class={HuiTabClass} on-click={this.tabChange}>
         {label}
       </li>
     )
+  },
+  mounted () {
+    this.$parent.contents.push(this)
   }
 }
 </script>

@@ -2,31 +2,41 @@
 export default {
   name: 'HuiTabs',
   props: {
-    value: {
+    current: {
       type: [String, Number]
     }
   },
   provide () {
     let data = {}
-
-    Object.defineProperty(data, 'value', {
-      get: () => this.value,
+    Object.defineProperty(data, 'current', {
+      get: () => this.current,
       enumerable: true
     })
-
     return {
       data
     }
   },
+  data () {
+    return {
+      contents: []
+    }
+  },
   render (h) {
-    console.log(this.data)
+    let defaultSlots = this.$slots.default
+    let content = this.contents.map((item) => {
+      return item.active ? item.$slots.default : null
+    })
     return (
       <div class="HuiTabs">
-        <ul class="hui-tabs-header">
-          {this.$slots.default}
-        </ul>
+        <ul class="hui-tabs-header">{defaultSlots}</ul>
+        <div class="hui-tabs-content">{content}</div>
       </div>
     )
+  },
+  methods: {
+    updateCurrent (index) {
+      this.$emit('update:current', index)
+    }
   }
 }
 </script>
