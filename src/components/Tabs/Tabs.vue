@@ -7,7 +7,7 @@ export default {
     }
   },
   provide () {
-    const data = {}
+    let data = {}
 
     Object.defineProperty(data, 'value', {
       get: () => this.value,

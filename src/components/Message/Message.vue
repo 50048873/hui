@@ -2,7 +2,7 @@
   <transition name="hui-fade" @after-leave="afterLeave">
     <div class="HuiMessage-default" :class="customClass" v-if="visible" @click="closeModal">
       <div class="huiMessage-contentWrap">
-        <i :class="icon" v-if="icon"></i>
+        <i :class="[icon, type]" v-if="icon"></i>
         <div class="huiMessage-content" v-html="content"></div>
       </div>
     </div>
@@ -36,7 +36,11 @@ export default {
     },
     time: {
       type: [Number, String],
-      default: 0
+      default: 5000
+    },
+    type: {
+      type: String,
+      default: 'info'
     }
   },
   methods: {
@@ -81,27 +85,42 @@ export default {
 </script>
 
 <style scoped lang="less">
+  @import '../../assets/less/variable.less';
   .HuiMessage-default {
     position: fixed;
     z-index: 5000;
-    width: 7.6em;
-    min-height: 7.6em;
-    top: 180px;
+    max-width: 200px;
+    top: 50%;
     left: 50%;
-    margin-left: -3.8em;
-    background: rgba(40, 40, 40, 0.75);
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
     text-align: center;
     border-radius: 5px;
     color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding: 15px 20px;
     .huiMessage-contentWrap {
       [class^=hui-] {
         display: block;
-        margin-bottom: 4px;
         font-size: 3em;
+        &.info {
+          color: white;
+        }
+        &.error {
+          color: red;
+        }
+        &.success {
+          color: @color-success;
+        }
+        &.warn {
+          color: @color-warn;
+        }
+      }
+      .huiMessage-content {
+        padding-top: 10px;
+        line-height: 1.5;
       }
     }
   }

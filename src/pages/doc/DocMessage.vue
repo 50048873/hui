@@ -28,8 +28,8 @@ export default {
     },
     message () {
       this.$message({
-        content: '方法内容',
-        time: 2000,
+        content: '<p>方法内容</p>',
+        time: 0,
         customClass: 'aaa',
         icon: 'hui-success',
         closeOnClickModal: true,

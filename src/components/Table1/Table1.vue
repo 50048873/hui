@@ -20,7 +20,7 @@ export default {
       let tr = <tr></tr>
       let tds = []
       propsDatas.forEach((propsData) => {
-        tds.push(<td>{item[propsData.prop]}</td>)
+        tds.push(<td><span>{item[propsData.prop]}</span></td>)
       })
       tr.children = tds
       return tr
