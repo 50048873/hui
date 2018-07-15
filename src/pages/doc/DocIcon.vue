@@ -15,7 +15,7 @@
         </li>
       </ul>
       <Title title="普通图标使用方法" des="直接在页面加入相应的组件，例如："></Title>
-      <Example :code="code1" class="iconExample">
+      <Example :code="code1" class="iconSvg">
         <hui-icon-normal-explain></hui-icon-normal-explain>
         <hui-icon-normal-wind iconColor="#606266" width="2em" height="2em"></hui-icon-normal-wind>
       </Example>
@@ -45,7 +45,7 @@
         </li>
       </ul>
       <Title title="动画图标使用方法" des="直接在页面加入相应的组件，例如："></Title>
-      <Example :code="code2" class="iconExample">
+      <Example :code="code2" class="iconSvg">
         <hui-icon-animated-rain></hui-icon-animated-rain>
         <hui-icon-animated-water iconColor="#606266" width="2em" height="2em"></hui-icon-animated-water>
       </Example>
@@ -54,11 +54,10 @@
     <Title title="字体图标" des="提供了一套字体图标集合，适合单色的使用场景" theme="Title-theme1"></Title>
     <div>
       <Title title="使用方法" des="直接通过设置类名为 hui-icon-iconName 来使用即可。例如："></Title>
-      <Example :code="code1" class="iconExample">
-        <i class="hui-lock"></i>
-        <i class="hui-eye"></i>
+      <Example :code="code1" class="iconClass">
+        <span><i class="hui-icon-lock"></i></span>
+        <span><i class="hui-icon-eye"></i></span>
       </Example>
-
       <Title title="字体图标集合" des="这是一套常规<a href='/static/font-hui/demo.html' target='_blank'>字体图标</a>集合"></Title>
       <iframe src="/static/font-hui/demo.html"></iframe>
     </div>
@@ -69,8 +68,8 @@
 export default {
   created () {
     this.code1 = `
-      <hui-icon-normal-explain></hui-icon-normal-explain>
-      <hui-icon-normal-wind iconColor="#606266" width="2em" height="2em"></hui-icon-normal-wind>
+      <i class="hui-icon-lock"></i>
+      <i class="hui-icon-eye"></i>
     `
     this.code2 = `
       <hui-icon-animated-rain></hui-icon-animated-rain>
@@ -82,10 +81,20 @@ export default {
 
 <style scoped lang="less">
   .DocIcon {
-    .iconExample {
+    .iconSvg {
       svg {
         margin-right: 1.5em;
         vertical-align: middle;
+      }
+    }
+    .iconClass {
+      span {
+        display: inline-block;
+        padding: 0 15px;
+        border-right: 1px solid #eee;
+        i {
+          font-size: 1.5em;
+        }
       }
     }
     .iconList {
@@ -109,8 +118,9 @@ export default {
         position: relative;
         .title {
           position: absolute;
+          right: 1px;
           bottom: 0;
-          width: 100%;
+          left: 1px;
           line-height: 1.5;
           font-size: 14px;
           background-color: white;

@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'font-hui';
   src:
-    url('fonts/font-hui.ttf?3pj4gn') format('truetype'),
-    url('fonts/font-hui.woff?3pj4gn') format('woff'),
-    url('fonts/font-hui.svg?3pj4gn#font-hui') format('svg');
+    url('fonts/font-hui.ttf?4eipkx') format('truetype'),
+    url('fonts/font-hui.woff?4eipkx') format('woff'),
+    url('fonts/font-hui.svg?4eipkx#font-hui') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="hui-"], [class*=" hui-"] {
+[class^="hui-icon-"], [class*=" hui-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'font-hui' !important;
   speak: none;
@@ -23,231 +23,231 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.hui-warn:before {
+.hui-icon-warn:before {
   content: "\e91b";
 }
-.hui-success:before {
+.hui-icon-success:before {
   content: "\e949";
 }
-.hui-success-no-circle:before {
+.hui-icon-success-no-circle:before {
   content: "\e94a";
 }
-.hui-warn-no-circle:before {
+.hui-icon-warn-no-circle:before {
   content: "\e94c";
 }
-.hui-bell:before {
+.hui-icon-bell:before {
   content: "\e900";
 }
-.hui-cancel:before {
+.hui-icon-cancel:before {
   content: "\e901";
 }
-.hui-exclamation-mark:before {
+.hui-icon-exclamation-mark:before {
   content: "\e902";
 }
-.hui-eye:before {
+.hui-icon-eye:before {
   content: "\e903";
 }
-.hui-lock:before {
+.hui-icon-lock:before {
   content: "\e904";
 }
-.hui-square:before {
+.hui-icon-square:before {
   content: "\e905";
 }
-.hui-square-o:before {
+.hui-icon-square-o:before {
   content: "\e906";
 }
-.hui-user:before {
+.hui-icon-user:before {
   content: "\e907";
 }
-.hui-close:before {
+.hui-icon-close:before {
   content: "\e908";
 }
-.hui-trumpet:before {
+.hui-icon-trumpet:before {
   content: "\e909";
 }
-.hui-yc:before {
+.hui-icon-yc:before {
   content: "\e90a";
 }
-.hui-zc:before {
+.hui-icon-zc:before {
   content: "\e90b";
 }
-.hui-list:before {
+.hui-icon-list:before {
   content: "\e90c";
 }
-.hui-map:before {
+.hui-icon-map:before {
   content: "\e90d";
 }
-.hui-oa:before {
+.hui-icon-oa:before {
   content: "\e90e";
 }
-.hui-gcgl:before {
+.hui-icon-gcgl:before {
   content: "\e90f";
 }
-.hui-kfys:before {
+.hui-icon-kfys:before {
   content: "\e910";
 }
-.hui-kjcx:before {
+.hui-icon-kjcx:before {
   content: "\e911";
 }
-.hui-me:before {
+.hui-icon-me:before {
   content: "\e912";
 }
-.hui-skgl:before {
+.hui-icon-skgl:before {
   content: "\e913";
 }
-.hui-sqyb:before {
+.hui-icon-sqyb:before {
   content: "\e914";
 }
-.hui-szgl:before {
+.hui-icon-szgl:before {
   content: "\e915";
 }
-.hui-szygl:before {
+.hui-icon-szygl:before {
   content: "\e916";
 }
-.hui-txl:before {
+.hui-icon-txl:before {
   content: "\e917";
 }
-.hui-xx:before {
+.hui-icon-xx:before {
   content: "\e918";
 }
-.hui-zhgl:before {
+.hui-icon-zhgl:before {
   content: "\e919";
 }
-.hui-zhsw:before {
+.hui-icon-zhsw:before {
   content: "\e91a";
 }
-.hui-info:before {
+.hui-icon-info:before {
   content: "\e91c";
 }
-.hui-jbxx:before {
+.hui-icon-jbxx:before {
   content: "\e91d";
 }
-.hui-jc:before {
+.hui-icon-jc:before {
   content: "\e91e";
 }
-.hui-member:before {
+.hui-icon-member:before {
   content: "\e91f";
 }
-.hui-path:before {
+.hui-icon-path:before {
   content: "\e920";
 }
-.hui-sksw:before {
+.hui-icon-sksw:before {
   content: "\e921";
 }
-.hui-xj:before {
+.hui-icon-xj:before {
   content: "\e922";
 }
-.hui-phone:before {
+.hui-icon-phone:before {
   content: "\e923";
 }
-.hui-add:before {
+.hui-icon-add:before {
   content: "\e924";
 }
-.hui-rgtb:before {
+.hui-icon-rgtb:before {
   content: "\e925";
 }
-.hui-filter:before {
+.hui-icon-filter:before {
   content: "\e926";
 }
-.hui-next:before {
+.hui-icon-next:before {
   content: "\e927";
 }
-.hui-play:before {
+.hui-icon-play:before {
   content: "\e928";
 }
-.hui-prev:before {
+.hui-icon-prev:before {
   content: "\e929";
 }
-.hui-tzxx:before {
+.hui-icon-tzxx:before {
   content: "\e92a";
 }
-.hui-calendar:before {
+.hui-icon-calendar:before {
   content: "\e92b";
 }
-.hui-back:before {
+.hui-icon-back:before {
   content: "\e92c";
 }
-.hui-clock:before {
+.hui-icon-clock:before {
   content: "\e92d";
 }
-.hui-minus:before {
+.hui-icon-minus:before {
   content: "\e92e";
 }
-.hui-search:before {
+.hui-icon-search:before {
   content: "\e92f";
 }
-.hui-circle:before {
+.hui-icon-circle:before {
   content: "\e930";
 }
-.hui-jy:before {
+.hui-icon-jy:before {
   content: "\e931";
 }
-.hui-jzc:before {
+.hui-icon-jzc:before {
   content: "\e932";
 }
-.hui-fzze:before {
+.hui-icon-fzze:before {
   content: "\e933";
 }
-.hui-lrzr:before {
+.hui-icon-lrzr:before {
   content: "\e934";
 }
-.hui-money:before {
+.hui-icon-money:before {
   content: "\e935";
 }
-.hui-tz:before {
+.hui-icon-tz:before {
   content: "\e936";
 }
-.hui-sc:before {
+.hui-icon-sc:before {
   content: "\e937";
 }
-.hui-kf:before {
+.hui-icon-kf:before {
   content: "\e938";
 }
-.hui-gw:before {
+.hui-icon-gw:before {
   content: "\e939";
 }
-.hui-dfscb:before {
+.hui-icon-dfscb:before {
   content: "\e93a";
 }
-.hui-dl:before {
+.hui-icon-dl:before {
   content: "\e93b";
 }
-.hui-gsl:before {
+.hui-icon-gsl:before {
   content: "\e93c";
 }
-.hui-snh:before {
+.hui-icon-snh:before {
   content: "\e93d";
 }
-.hui-szhgl:before {
+.hui-icon-szhgl:before {
   content: "\e93e";
 }
-.hui-yl:before {
+.hui-icon-yl:before {
   content: "\e93f";
 }
-.hui-zlsyh:before {
+.hui-icon-zlsyh:before {
   content: "\e940";
 }
-.hui-yshs:before {
+.hui-icon-yshs:before {
   content: "\e941";
 }
-.hui-ysjgdb:before {
+.hui-icon-ysjgdb:before {
   content: "\e942";
 }
-.hui-yssssl:before {
+.hui-icon-yssssl:before {
   content: "\e943";
 }
-.hui-xjgd:before {
+.hui-icon-xjgd:before {
   content: "\e944";
 }
-.hui-qxrw:before {
+.hui-icon-qxrw:before {
   content: "\e945";
 }
-.hui-gw2:before {
+.hui-icon-gw2:before {
   content: "\e946";
 }
-.hui-gjlb:before {
+.hui-icon-gjlb:before {
   content: "\e947";
 }
-.hui-gclb:before {
+.hui-icon-gclb:before {
   content: "\e948";
 }

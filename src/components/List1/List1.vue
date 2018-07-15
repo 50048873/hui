@@ -1,7 +1,7 @@
 <template>
   <ul :class="theme" v-if="data.length">
     <li v-for="(item, index) in data" :key="index" @click="listClick(item, index)" :class="getWarnCls(item.status)">
-      <div class="iconWrap" v-if="theme === 'HuiList1-theme2' && item.status === 1" @click.stop="warnClick(item, index)"><i class="hui-bell"></i></div>
+      <div class="iconWrap" v-if="theme === 'HuiList1-theme2' && item.status === 1" @click.stop="warnClick(item, index)"><i class="hui-icon-bell"></i></div>
       <div class="line">
         <span class="line-item">
           <em class="title">{{item.title}}</em>
@@ -173,7 +173,7 @@ export default {
           display: flex;
           align-items: center;
           justify-content: center;
-          .hui-bell {
+          .hui-icon-bell {
             font-size: 18px;
           }
         }

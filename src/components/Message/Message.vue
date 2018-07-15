@@ -105,6 +105,7 @@ export default {
       [class^=hui-] {
         display: block;
         font-size: 3em;
+        padding-bottom: 10px;
         &.info {
           color: white;
         }
@@ -119,7 +120,6 @@ export default {
         }
       }
       .huiMessage-content {
-        padding-top: 10px;
         line-height: 1.5;
       }
     }

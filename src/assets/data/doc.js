@@ -4,35 +4,35 @@ const menu1 = {
       data: [
         {
           title: '水情',
-          iconCls: 'hui-lock',
+          iconCls: 'hui-icon-lock',
           to: '/sq',
           backgroundColor: 'red'
         },
         {
           title: '雨情',
-          iconCls: 'hui-lock',
+          iconCls: 'hui-icon-lock',
           to: 'yq',
           backgroundColor: 'green'
         },
         {
           title: '风情',
-          iconCls: 'hui-lock',
+          iconCls: 'hui-icon-lock',
           to: '/fq',
           backgroundColor: 'blue'
         },
         {
           title: '水情',
-          iconCls: 'hui-lock',
+          iconCls: 'hui-icon-lock',
           to: '/sq'
         },
         {
           title: '雨情',
-          iconCls: 'hui-lock',
+          iconCls: 'hui-icon-lock',
           to: 'yq'
         },
         {
           title: '风情',
-          iconCls: 'hui-lock',
+          iconCls: 'hui-icon-lock',
           to: '/fq'
         }
       ]
@@ -933,6 +933,135 @@ export default [
               <hui-icon-animated-water iconColor="#606266" width="2em" height="2em"></hui-icon-animated-water>
             </hui-float-ball>
           </template>
+        `,
+        data: null
+      }
+    ]
+  },
+  {
+    id: 'message',
+    title: '消息提示',
+    titleDes: '常用于移动端的消息提示',
+    attrs: [
+      {
+        attr: 'visible',
+        des: '是否可见（注意写法为visible.sync）',
+        type: 'Boolean',
+        optional: '—',
+        default: 'false'
+      },
+      {
+        attr: 'closeOnClickModal',
+        des: '点击是否关闭（注意，这里是点击消息内容元素，此模块没有遮罩）',
+        type: 'Boolean',
+        optional: '—',
+        default: true
+      },
+      {
+        attr: 'content',
+        des: '消息的内容，支持html内容',
+        type: 'String',
+        optional: 'true',
+        default: '—'
+      },
+      {
+        attr: 'customClass',
+        des: '自定类名',
+        type: 'String',
+        optional: '—',
+        default: '—'
+      },
+      {
+        attr: 'icon',
+        des: '消息提示的字体图标类名',
+        type: 'String',
+        optional: '—',
+        default: '—'
+      },
+      {
+        attr: 'time',
+        des: '自动消失的时间，默认5000毫秒，传入0则不自动消失',
+        type: 'Number, String',
+        optional: '—',
+        default: '5000'
+      },
+      {
+        attr: 'type',
+        des: '类型（info/error/success/warn）',
+        type: 'String',
+        optional: '—',
+        default: 'info'
+      }
+    ],
+    events: [
+      {
+        attr: 'closed',
+        des: '消息提示框关闭后的回调',
+        callbackParam: ''
+      }
+    ],
+    example: [
+      {
+        title: '组件用法',
+        titleDes: '组件打开提示框',
+        code: `
+          <template>
+            <div>
+              <button @click="visible=true">组件打开提示框</button>
+              <hui-message
+                :visible.sync="visible"
+                @closed="closed"
+                content="这是我要显示的内容"
+                >
+              </hui-message>
+            </div>
+          </template>
+
+          <script>
+          export default {
+            data () {
+              return {
+                visible: false
+              }
+            },
+            methods: {
+              closed () {
+                alert('closed')
+              }
+            }
+          }
+          </script>
+        `,
+        data: null
+      },
+      {
+        title: '方法用法',
+        titleDes: '方法打开提示框',
+        code: `
+          <template>
+            <div>
+              <button @click="message">方法打开提示框</button>
+            </div>
+          </template>
+
+          <script>
+          export default {
+            methods: {
+              message () {
+                this.$message({
+                  content: '<p>方法内容</p>',
+                  time: 0,
+                  customClass: 'aaa',
+                  icon: 'hui-success',
+                  closeOnClickModal: true,
+                  closed: function () {
+                    alert('closed callback')
+                  }
+                })
+              }
+            }
+          }
+          </script>
         `,
         data: null
       }
