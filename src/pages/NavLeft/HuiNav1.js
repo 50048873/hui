@@ -96,5 +96,34 @@ export default [
         to: '/component/tabs'
       }
     ]
+  },
+  {
+    title: '工具方法',
+    children: [
+      {
+        title: '通用方法',
+        to: '/util/universal'
+      },
+      {
+        title: '日期方法',
+        to: '/util/date'
+      },
+      {
+        title: '数字方法',
+        to: '/util/number'
+      },
+      {
+        title: '数据方法',
+        to: '/util/data'
+      },
+      {
+        title: 'html方法',
+        to: '/util/html'
+      },
+      {
+        title: '其它方法',
+        to: '/util/other'
+      }
+    ]
   }
 ]

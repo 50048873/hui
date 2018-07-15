@@ -22,6 +22,13 @@ import DeveloperGuideInstall from '@/pages/doc/DeveloperGuideInstall'
 import DeveloperGuideQuickstart from '@/pages/doc/DeveloperGuideQuickstart'
 import DeveloperGuideCustomTheme from '@/pages/doc/DeveloperGuideCustomTheme'
 
+import DocUtilUniversal from '@/pages/doc/DocUtilUniversal'
+import DocUtilDate from '@/pages/doc/DocUtilDate'
+import DocUtilNumber from '@/pages/doc/DocUtilNumber'
+import DocUtilData from '@/pages/doc/DocUtilData'
+import DocUtilHtml from '@/pages/doc/DocUtilHtml'
+import DocUtilOther from '@/pages/doc/DocUtilOther'
+
 Vue.use(Router)
 
 export default new Router({
@@ -131,6 +138,37 @@ export default new Router({
       path: '/component/tabs',
       name: 'tabs',
       component: DocTabs
+    },
+    // 工具方法
+    {
+      path: '/util/universal',
+      name: 'universal',
+      component: DocUtilUniversal
+    },
+    {
+      path: '/util/date',
+      name: 'date',
+      component: DocUtilDate
+    },
+    {
+      path: '/util/number',
+      name: 'number',
+      component: DocUtilNumber
+    },
+    {
+      path: '/util/data',
+      name: 'data',
+      component: DocUtilData
+    },
+    {
+      path: '/util/html',
+      name: 'html',
+      component: DocUtilHtml
+    },
+    {
+      path: '/util/other',
+      name: 'other',
+      component: DocUtilOther
     }
   ]
 })
