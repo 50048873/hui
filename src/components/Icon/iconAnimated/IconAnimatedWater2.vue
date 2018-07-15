@@ -34,18 +34,20 @@ export default {
   }
 
   @keyframes riseFall {
-    from {
+    from, to {
       transform: scaleY(0);
+      opacity: 0;
     }
-    to {
+    50% {
       transform: scaleY(1);
+      opacity: 1;
     }
   }
 
   .riseFall {
     animation-iteration-count: infinite;
     animation-name: riseFall;
-    animation-duration: 2s;
+    animation-duration: 6s;
     transform-origin: center bottom;
   }
 </style>

@@ -5,7 +5,7 @@
     <hui-tabs :current.sync="current">
       <hui-tab label="标签1" index="1">
         <span slot="label">查抄标签</span>
-        <div>内容1</div>
+        <div ref="content2">内容1{{testTabs}}</div>
       </hui-tab>
       <hui-tab label="标签2" index="2">
         <div>内容2{{testTabs}}</div>
@@ -18,7 +18,7 @@
 export default {
   data () {
     return {
-      current: '2',
+      current: '1',
       testTabs: ''
     }
   },

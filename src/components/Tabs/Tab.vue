@@ -22,6 +22,9 @@ export default {
       this.$parent.updateCurrent(this.index)
     }
   },
+  created () {
+    this.$parent.contents.push(this)
+  },
   render (h) {
     let label = this.$slots.label || <span>{this.label}</span>
     let HuiTabClass = {
@@ -33,9 +36,6 @@ export default {
         {label}
       </li>
     )
-  },
-  mounted () {
-    this.$parent.contents.push(this)
   }
 }
 </script>

@@ -53,12 +53,12 @@ const list1 = {
             {
               title: '水位',
               value: '1443.54',
-              unit: 'm'
+              unit: 'm<sup>3</sup>'
             },
             {
               title: '预警水位',
               value: '1443.32',
-              unit: 'm'
+              unit: 'm<sup>3</sup>'
             }
           ]
         },
@@ -70,7 +70,7 @@ const list1 = {
           children: [
             {
               title: '水位',
-              value: '1730.24',
+              value: '--',
               unit: 'm'
             },
             {

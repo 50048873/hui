@@ -5,8 +5,14 @@
     <div>
       <Title title="普通图标" des="这是一套普通的svg图标集合，适合彩色的使用场景"></Title>
       <ul class="iconList clearfix">
-        <li><hui-icon-normal-explain></hui-icon-normal-explain></li>
-        <li><hui-icon-normal-wind></hui-icon-normal-wind></li>
+        <li>
+          <hui-icon-normal-explain></hui-icon-normal-explain>
+          <h6 class="title" title="hui-icon-normal-explain">explain</h6>
+        </li>
+        <li>
+          <hui-icon-normal-wind></hui-icon-normal-wind>
+          <h6 class="title" title="hui-icon-normal-wind">wind</h6>
+        </li>
       </ul>
       <Title title="普通图标使用方法" des="直接在页面加入相应的组件，例如："></Title>
       <Example :code="code1" class="iconExample">
@@ -17,11 +23,26 @@
     <div>
       <Title title="动画图标" des="这是一套带动画的svg图标集合"></Title>
       <ul class="iconList clearfix">
-        <li><hui-icon-animated-rain></hui-icon-animated-rain></li>
-        <li><hui-icon-animated-wind></hui-icon-animated-wind></li>
-        <li><hui-icon-animated-water></hui-icon-animated-water></li>
-        <li><hui-icon-animated-water2></hui-icon-animated-water2></li>
-        <li><hui-icon-animated-water3></hui-icon-animated-water3></li>
+        <li>
+          <hui-icon-animated-rain></hui-icon-animated-rain>
+          <h6 class="title" title="hui-icon-animated-rain">rain</h6>
+        </li>
+        <li>
+          <hui-icon-animated-wind></hui-icon-animated-wind>
+          <h6 class="title" title="hui-icon-animated-wind">wind</h6>
+        </li>
+        <li>
+          <hui-icon-animated-water></hui-icon-animated-water>
+          <h6 class="title" title="hui-icon-animated-water">water</h6>
+        </li>
+        <li>
+          <hui-icon-animated-water2></hui-icon-animated-water2>
+          <h6 class="title" title="hui-icon-animated-water2">water2</h6>
+        </li>
+        <li>
+          <hui-icon-animated-water3></hui-icon-animated-water3>
+          <h6 class="title" title="hui-icon-animated-water3">water3</h6>
+        </li>
       </ul>
       <Title title="动画图标使用方法" des="直接在页面加入相应的组件，例如："></Title>
       <Example :code="code2" class="iconExample">
@@ -40,67 +61,6 @@
 
       <Title title="字体图标集合" des="这是一套常规<a href='/static/font-hui/demo.html' target='_blank'>字体图标</a>集合"></Title>
       <iframe src="/static/font-hui/demo.html"></iframe>
-      <!-- <ul class="iconList clearfix">
-        <i class="hui-bell"></i>
-        <i class="hui-cancel"></i>
-        <i class="hui-exclamation-mark"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-lock"></i>
-        <i class="hui-square"></i>
-        <i class="hui-square-o"></i>
-        <i class="hui-user"></i>
-        <i class="hui-close"></i>
-        <i class="hui-trumpet"></i>
-        <i class="hui-yc"></i>
-        <i class="hui-zc"></i>
-        <i class="hui-list"></i>
-        <i class="hui-map"></i>
-        <i class="hui-oa"></i>
-        <i class="hui-gcgl"></i>
-        <i class="hui-kfys"></i>
-        <i class="hui-kjcx"></i>
-        <i class="hui-me"></i>
-        <i class="hui-skgl"></i>
-        <i class="hui-sqyb"></i>
-        <i class="hui-szgl"></i>
-        <i class="hui-szygl"></i>
-        <i class="hui-txl"></i>
-        <i class="hui-xx"></i>
-        <i class="hui-zhgl"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-        <i class="hui-eye"></i>
-      </ul> -->
     </div>
   </section>
 </template>
@@ -146,10 +106,20 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        .title {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          line-height: 1.5;
+          font-size: 14px;
+          background-color: white;
+        }
       }
       svg {
         width: 36px;
         height: 36px;
+        margin-top: -20px;
       }
     }
     iframe {

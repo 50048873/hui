@@ -14,7 +14,7 @@
         <span class="line-item" v-for="(item, index) in item.children" :key="index">
           <em>{{item.title}}：</em>
           <em>{{item.value}}</em>
-          <em>{{item.unit}}</em>
+          <em v-show="handleUnitVisible(item.value)" v-html="item.unit"></em>
         </span>
       </div>
     </li>
@@ -37,6 +37,9 @@ export default {
     }
   },
   methods: {
+    handleUnitVisible (value) {
+      return value !== null && value !== '' && value !== undefined && value !== '--'
+    },
     getWarnCls (status) {
       return status === 1 ? 'WARN' : ''
     },
@@ -89,6 +92,12 @@ export default {
             font-weight: bold;
             font-size: 16px;
           }
+          &:first-child {
+            padding-right: 10px;
+          }
+          &:last-child {
+            padding-left: 10px;
+          }
         }
         .time {
           text-align: right;
@@ -126,6 +135,12 @@ export default {
           .title {
             font-weight: bold;
             font-size: 16px;
+          }
+          &:first-child {
+            padding-right: 10px;
+          }
+          &:last-child {
+            padding-left: 10px;
           }
         }
         .time {
