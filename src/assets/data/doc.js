@@ -919,18 +919,18 @@ export default [
         titleDes: '传入字体图标类名',
         code: `
           <template>
-            <hui-float-ball right="15" bottom="15" iconClass="hui-icon-wind"></hui-float-ball>
+            <hui-float-ball right="15" bottom="15" iconClass="hui-kfys" v-if="index === 0"></hui-float-ball>
           </template>
         `,
         data: null
       },
       {
         title: '其它用法',
-        titleDes: '传入子元素',
+        titleDes: '传入子字体图标组件',
         code: `
           <template>
             <hui-float-ball right="15" bottom="15">
-              <hui-icon-normal-explain class="iconExplain"></hui-icon-normal-explain>
+              <hui-icon-animated-water iconColor="#606266" width="2em" height="2em"></hui-icon-animated-water>
             </hui-float-ball>
           </template>
         `,
