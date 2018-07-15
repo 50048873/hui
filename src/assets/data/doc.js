@@ -273,6 +273,144 @@ const table2 = {
 
 export default [
   {
+    id: 'dialog',
+    title: '对话框（dialog）',
+    titleDes: '常用于移动端弹出对话框',
+    attrs: [
+      {
+        attr: 'visible',
+        des: '是否可见',
+        type: 'Boolean',
+        optional: '—',
+        default: '—'
+      },
+      {
+        attr: 'title',
+        des: '标题',
+        type: 'String',
+        optional: '—',
+        default: '—'
+      },
+      {
+        attr: 'closeOnClickModal',
+        des: '点击遮罩是否关闭',
+        type: 'Boolean',
+        optional: '—',
+        default: 'true'
+      },
+      {
+        attr: 'modal',
+        des: '是否显示遮罩',
+        type: 'Boolean',
+        optional: '—',
+        default: 'true'
+      },
+      {
+        attr: 'customClass',
+        des: '自定类名',
+        type: 'String',
+        optional: '—',
+        default: ''
+      },
+      {
+        attr: 'cancel',
+        des: '取消按钮文本',
+        type: 'String',
+        optional: '—',
+        default: '—'
+      },
+      {
+        attr: 'confirm',
+        des: '确认按钮文本',
+        type: 'String',
+        optional: '—',
+        default: '确认'
+      },
+      {
+        attr: 'beforeClose',
+        des: '关闭前的回调',
+        type: 'Function',
+        optional: '—',
+        default: '—'
+      }
+    ],
+    events: [
+      {
+        attr: 'open',
+        des: '打开时的回调函数',
+        callbackParam: '—'
+      },
+      {
+        attr: 'close',
+        des: '确认、取消按钮被单击时触发（如果beforeClose传递了，则返回true才能关闭，返回false取消关闭）',
+        callbackParam: '—'
+      },
+      {
+        attr: 'closed',
+        des: '关闭后的回调函数（对话框元素关闭动画结束后执行）',
+        callbackParam: '—'
+      }
+    ],
+    example: [
+      {
+        title: '基础用法',
+        titleDes: '包含属性beforeClose，事件监听的对话框',
+        code: `
+         <template>
+          <div>
+            <button @click="visible=true">打开对话框</button>
+            <hui-dialog
+              :visible.sync="visible"
+              title="自定标题"
+              width="300px"
+              :before-close="beforeClose"
+              @open="open"
+              @close="close"
+              @closed="closed">
+              <p>这是我要显示的内容</p>
+              <p>这是我要显示的内容</p>
+              <p>这是我要显示的内容</p>
+              <p>这是我要显示的内容</p>
+              <p>这是我要显示的内容</p>
+            </hui-dialog>
+          </div>
+        </template>
+
+        <script>
+        export default {
+          data () {
+            return {
+              visible: false
+            }
+          },
+          methods: {
+            open () {
+              console.log('open')
+            },
+            close () {
+              console.log('close')
+            },
+            closed () {
+              console.log('closed')
+            },
+            beforeClose (done) {
+              if (Math.random() > 0.5) {
+                console.log('随机数确认了关闭')
+                done()
+              } else {
+                console.log('随机数取消了关闭')
+                return false
+              }
+            }
+          }
+        }
+        </script>
+        `,
+        data: null
+      }
+    ]
+  },
+  {
     id: 'menu1',
     title: '菜单1（Menu1）',
     titleDes: '常用于移动端首屏的菜单',

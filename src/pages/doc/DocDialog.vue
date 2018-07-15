@@ -1,26 +1,34 @@
 <template>
   <div>
-    <p>对话框文档开发中...</p>
-    <button @click="visible=true">打开对话框</button>
-    <hui-dialog
-      :visible.sync="visible"
-      title="自定标题"
-      width="300px"
-      :before-close="beforeClose"
-      @open="open"
-      @close="close"
-      @closed="closed">
-      <p>这是我要显示的内容</p>
-      <p>这是我要显示的内容</p>
-      <p>这是我要显示的内容</p>
-      <p>这是我要显示的内容</p>
-      <p>这是我要显示的内容</p>
-    </hui-dialog>
+    <Title :title="docData.title" :des="docData.titleDes" theme="Title-theme1"></Title>
+    <section v-for="(item, index) in docData.example" :key="index">
+      <Title :title="item.title" :des="item.titleDes"></Title>
+      <Example :code="item.code">
+        <button @click="visible=true">打开对话框</button>
+        <hui-dialog
+          :visible.sync="visible"
+          title="自定标题"
+          width="300px"
+          :before-close="beforeClose"
+          @open="open"
+          @close="close"
+          @closed="closed">
+          <p>这是我要显示的内容</p>
+          <p>这是我要显示的内容</p>
+          <p>这是我要显示的内容</p>
+          <p>这是我要显示的内容</p>
+          <p>这是我要显示的内容</p>
+        </hui-dialog>
+      </Example>
+    </section>
+    <DocApi></DocApi>
   </div>
 </template>
 
 <script>
+import {initSingeDirectionData} from '@/assets/js/mixin'
 export default {
+  mixins: [initSingeDirectionData],
   data () {
     return {
       visible: false
@@ -37,11 +45,11 @@ export default {
       console.log('closed')
     },
     beforeClose (done) {
-      done()
       if (Math.random() > 0.5) {
-        console.log('这里测试随机关闭')
+        console.log('随机数确认了关闭')
+        done()
       } else {
-        console.log('取消了关闭')
+        console.log('随机数取消了关闭')
         return false
       }
     }
