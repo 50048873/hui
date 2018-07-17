@@ -10,6 +10,7 @@ import DocMenu1 from '@/pages/doc/DocMenu1'
 import DocMessage from '@/pages/doc/DocMessage'
 import DocNav1 from '@/pages/doc/DocNav1'
 import DocNav2 from '@/pages/doc/DocNav2'
+import DocNav3 from '@/pages/doc/DocNav3'
 import DocRouterviewSlide from '@/pages/doc/DocRouterviewSlide'
 import DocTab1 from '@/pages/doc/DocTab1'
 import DocTable1 from '@/pages/doc/DocTable1'
@@ -113,6 +114,11 @@ export default new Router({
       path: '/component/nav2',
       name: 'nav2',
       component: DocNav2
+    },
+    {
+      path: '/component/nav3',
+      name: 'nav3',
+      component: DocNav3
     },
     {
       path: '/component/routerviewSlide',

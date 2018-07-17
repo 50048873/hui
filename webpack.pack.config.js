@@ -3,7 +3,8 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: {
-    hui: './src/components/index.js'
+    hui: './src/components/index.js',
+    util: './src/assets/util/index.js'
   },
   output: {
     path: path.resolve(__dirname, './lib'),

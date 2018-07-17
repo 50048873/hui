@@ -16,16 +16,6 @@
     *zoom: 1;
 }
 
-.show {
-	display: block;
-}
-.hide { 
-	display: none;
-}
-.hidden { 
-	visibility: hidden;
-}
-
 .ellipsis {
     white-space: nowrap;
     overflow: hidden;
@@ -54,7 +44,7 @@
 
 .line-top {
 	position: relative;
-	&:before { 
+	&:before {
 		content: " ";
     position: absolute;
     top: 0;
@@ -72,7 +62,7 @@
 
 .line-bottom {
     position: relative;
-    &:after { 
+    &:after {
   		content: " ";
       position: absolute;
       right: 0;
@@ -88,7 +78,7 @@
     }
 }
 
-.sj-r(@w:12px, @c: red) { 
+.sj-r(@w:12px, @c: red) {
   content: '';
   position: absolute;
   width: 0;
@@ -99,7 +89,7 @@
   border-style: dashed dashed dashed solid;
 }
 
-.sj-l(@w:12px, @c: red) { 
+.sj-l(@w:12px, @c: red) {
   content: '';
   position: absolute;
   width: 0;
@@ -110,7 +100,7 @@
   border-style: dashed solid dashed dashed;
 }
 
-.sj-b(@w:12px, @c: #43c5ef) { 
+.sj-b(@w:12px, @c: #43c5ef) {
   width: 0;
   height: 0;
   overflow: hidden;

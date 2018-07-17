@@ -68,6 +68,10 @@ export default [
         to: '/component/nav2'
       },
       {
+        title: '导航3',
+        to: '/component/nav3'
+      },
+      {
         title: '上拉刷新',
         to: '/component/pullupRefresh'
       },

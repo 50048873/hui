@@ -32,6 +32,7 @@ export default {
       }
       .content {
         flex: 1;
+        position: relative;
       }
     }
     .preWrap {

@@ -13,7 +13,7 @@ export default {
   created () {
     this.pre = `
       <template>
-        <hui-slide></hui-slide>
+        <hui-routerview-slide></hui-routerview-slide>
       </template>
     `
   }

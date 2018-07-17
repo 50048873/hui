@@ -19,8 +19,7 @@
   "files": [
     "lib",
     "src/assets/less",
-    "src/assets/font-hui",
-    "src/assets/util"
+    "src/assets/font-hui"
   ],
   "dependencies": {
     "vue": "^2.5.2",
