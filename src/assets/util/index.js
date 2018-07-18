@@ -17,7 +17,8 @@ export {
 
 export {
   convertWindDrection,
-  androidInputBugFix
+  addAndroidInputBugFixEvent,
+  removeAndroidInputBugFixEvent
 } from './other.js'
 
 export {

@@ -71,11 +71,11 @@ export function getDateStr (addDayCount = 0, hour, minute, second, utc) {
   }
   let divide = utc ? 'T' : ' '
   let res
-  if (addDayCount && hour && minute && second) {
+  if (hour && minute && second) {
     res = `${y}-${m}-${d}${divide}${getHour()}:${getMinute()}:${getSecond()}`
-  } else if (addDayCount && hour && minute) {
+  } else if (hour && minute) {
     res = `${y}-${m}-${d}${divide}${getHour()}:${getMinute()}`
-  } else if (addDayCount && hour) {
+  } else if (hour) {
     res = `${y}-${m}-${d}${divide}${getHour()}`
   } else {
     res = `${y}-${m}-${d}`
