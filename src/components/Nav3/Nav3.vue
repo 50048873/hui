@@ -1,5 +1,5 @@
 <template>
-  <nav class="HuiNav3 line-top" :class="theme" v-if="data && data.length">
+  <nav class="HuiNav3" :style="[getHeight, getPosition]" :class="[theme, getHalfLineClass, getActiveLine]" v-if="data && data.length">
     <router-link
       v-for="(item, index) in data"
       :key="index"
@@ -12,11 +12,13 @@
       :event="item.event || event"
       :exactActiveClass="exactActiveClass(item)"
       @click="navClick(item, index)">
-      <div class="iconWrap">
-        <span :class="{'redDot': item.new}" v-if="item.new"></span>
-        <i :class="item.icon"></i>
+      <div class="huiNav3-item">
+        <div class="iconWrap" v-if="item.icon">
+          <span :class="{'redDot': item.new}" v-if="item.new"></span>
+          <i :class="item.icon"></i>
+        </div>
+        <h3 v-if="item.title">{{item.title}}</h3>
       </div>
-      <h3 v-if="item.title">{{item.title}}</h3>
     </router-link>
   </nav>
 </template>
@@ -50,6 +52,49 @@ export default {
     },
     theme: {
       type: String
+    },
+    position: {
+      type: String,
+      default: 'bottom'
+    },
+    height: {
+      type: String
+    },
+    isActiveLine: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    getPosition () {
+      if (this.position === 'top') {
+        return {
+          top: 0
+        }
+      }
+      return {
+        bottom: 0
+      }
+    },
+    getHalfLineClass () {
+      if (this.position === 'top') {
+        return 'line-bottom'
+      }
+      return 'line-top'
+    },
+    getHeight () {
+      if (this.height) {
+        return {
+          height: this.height
+        }
+      }
+      return ''
+    },
+    getActiveLine () {
+      if (this.isActiveLine) {
+        return 'isActiveLine'
+      }
+      return ''
     }
   },
   methods: {
@@ -78,41 +123,59 @@ export default {
   @import '../../assets/less/variable.less';
   .HuiNav3 {
     position: absolute;
-    bottom: 0;
-    z-index: 7;
+    z-index: 9;
     width: 100%;
     height: 62px;
     background-color: white;
     display: flex;
     text-align: center;
-    align-items: center;
     box-sizing: border-box;
+    white-space: nowrap;
+    overflow-x: visible;
     a {
-      display: block;
       flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: @color-nav-default;
+      padding: 0 1em;
       &.ON {
         color: #0e6fca;
       }
-      .iconWrap {
-        display: inline-block;
-        position: relative;
-        .redDot {
-          position: absolute;
-          top: -3px;
-          right: -3px;
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background-color: red;
+      .huiNav3-item {
+        .iconWrap {
+          display: inline-block;
+          position: relative;
+          .redDot {
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: red;
+          }
+          [class*="hui-icon"] {
+            font-size: 24px;
+          }
         }
-        [class*="hui-icon"] {
-          font-size: 24px;
+        h3 {
+          line-height: 1;
+          padding-top: 4px;
         }
       }
-      h3 {
-        line-height: 1;
-        padding-top: 4px;
+    }
+    &.isActiveLine {
+      .ON {
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          width: 100%;
+          height: 2px;
+          background-color: #0e6fca;
+        }
       }
     }
   }
