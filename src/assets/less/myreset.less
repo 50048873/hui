@@ -1,4 +1,8 @@
 // myreset
+html{
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+}
 body {
 	font-family: 'Helvetica Neue',
 				'Helvetica',
@@ -30,15 +34,19 @@ p {
 img {
 	max-width: 100%;
 	vertical-align: middle;
+  border: 0;
 }
 
 a {
 	text-decoration: none;
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+  border: 0;
 }
 
 input {
   border: none;
   background-color: transparent;
+  -webkit-appearance: none;
   &:focus {
     outline: 0;
   }

@@ -15,6 +15,7 @@ import Tab1 from '@/components/Tab1'
 import Table1 from '@/components/Table1'
 import Table2 from '@/components/Table2'
 import Tabs from '@/components/Tabs'
+import Uploader from '@/components/Uploader'
 
 export default () => {
   Vue.use(Dialog)
@@ -33,4 +34,5 @@ export default () => {
   Vue.use(Table1)
   Vue.use(Table2)
   Vue.use(Tabs)
+  Vue.use(Uploader)
 }

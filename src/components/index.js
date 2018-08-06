@@ -11,6 +11,7 @@ import RouterviewSlide from './RouterviewSlide'
 import Tab1 from './Tab1'
 import Table1 from './Table1'
 import Table2 from './Table2'
+import Uploader from './Uploader'
 
 // 有两个问题：1.vue组件里的css被打包到了js里；2.下面的less不能通过webpack.pack.config.js打包到指定目录
 // import '@/assets/less/base.less'
@@ -31,6 +32,7 @@ const all = (Vue) => {
   Vue.use(Tab1)
   Vue.use(Table1)
   Vue.use(Table2)
+  Vue.use(Uploader)
 }
 
 export {
@@ -47,5 +49,6 @@ export {
   RouterviewSlide,
   Tab1,
   Table1,
-  Table2
+  Table2,
+  Uploader
 }

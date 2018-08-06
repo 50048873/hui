@@ -98,6 +98,10 @@ export default [
       {
         title: '标签页tabs',
         to: '/component/tabs'
+      },
+      {
+        title: '图片上传uploader',
+        to: '/component/uploader'
       }
     ]
   },

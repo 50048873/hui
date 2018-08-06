@@ -1,5 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+// 开发指南
+import DeveloperGuidePack from '@/pages/doc/DeveloperGuidePack'
+import DeveloperGuideChangelog from '@/pages/doc/DeveloperGuideChangelog'
+import DeveloperGuideInstall from '@/pages/doc/DeveloperGuideInstall'
+import DeveloperGuideQuickstart from '@/pages/doc/DeveloperGuideQuickstart'
+import DeveloperGuideCustomTheme from '@/pages/doc/DeveloperGuideCustomTheme'
+// 组件
 import DocDialog from '@/pages/doc/DocDialog'
 import DocFloatBall from '@/pages/doc/DocFloatBall'
 import DocHeader1 from '@/pages/doc/DocHeader1'
@@ -16,13 +23,8 @@ import DocTab1 from '@/pages/doc/DocTab1'
 import DocTable1 from '@/pages/doc/DocTable1'
 import DocTable2 from '@/pages/doc/DocTable2'
 import DocTabs from '@/pages/doc/DocTabs'
-
-import DeveloperGuidePack from '@/pages/doc/DeveloperGuidePack'
-import DeveloperGuideChangelog from '@/pages/doc/DeveloperGuideChangelog'
-import DeveloperGuideInstall from '@/pages/doc/DeveloperGuideInstall'
-import DeveloperGuideQuickstart from '@/pages/doc/DeveloperGuideQuickstart'
-import DeveloperGuideCustomTheme from '@/pages/doc/DeveloperGuideCustomTheme'
-
+import DocUploader from '@/pages/doc/DocUploader'
+// 方法
 import DocUtilUniversal from '@/pages/doc/DocUtilUniversal'
 import DocUtilDate from '@/pages/doc/DocUtilDate'
 import DocUtilNumber from '@/pages/doc/DocUtilNumber'
@@ -144,6 +146,11 @@ export default new Router({
       path: '/component/tabs',
       name: 'tabs',
       component: DocTabs
+    },
+    {
+      path: '/component/uploader',
+      name: 'uploader',
+      component: DocUploader
     },
     // 工具方法
     {

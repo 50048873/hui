@@ -25,5 +25,12 @@ export {
   isArray,
   isObject,
   isString,
-  isNumber
+  isNumber,
+  normalizeRequestAnimationFrame,
+  getUuid,
+  createObjectURL,
+  dataURLtoBlob,
+  dataURLtoFile,
+  compress,
+  throttle
 } from './universal.js'

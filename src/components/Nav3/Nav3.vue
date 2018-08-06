@@ -123,7 +123,7 @@ export default {
   @import '../../assets/less/variable.less';
   .HuiNav3 {
     position: absolute;
-    z-index: 9;
+    z-index: 7;
     width: 100%;
     height: 62px;
     background-color: white;
@@ -172,6 +172,7 @@ export default {
           content: '';
           position: absolute;
           bottom: -2px;
+          left: 0;
           width: 100%;
           height: 2px;
           background-color: #0e6fca;
