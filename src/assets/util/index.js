@@ -3,11 +3,6 @@ export {
 } from './data.js'
 
 export {
-  standardDate,
-  getDateStr
-} from './date.js'
-
-export {
   getServerErrorMessageAsHtml
 } from './html.js'
 

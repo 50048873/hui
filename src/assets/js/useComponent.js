@@ -11,6 +11,7 @@ import Nav1 from '@/components/Nav1'
 import Nav2 from '@/components/Nav2'
 import Nav3 from '@/components/Nav3'
 import RouterviewSlide from '@/components/RouterviewSlide'
+import Search from '@/components/Search'
 import Tab1 from '@/components/Tab1'
 import Table1 from '@/components/Table1'
 import Table2 from '@/components/Table2'
@@ -30,6 +31,7 @@ export default () => {
   Vue.use(Nav2)
   Vue.use(Nav3)
   Vue.use(RouterviewSlide)
+  Vue.use(Search)
   Vue.use(Tab1)
   Vue.use(Table1)
   Vue.use(Table2)

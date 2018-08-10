@@ -19,6 +19,7 @@ import DocNav1 from '@/pages/doc/DocNav1'
 import DocNav2 from '@/pages/doc/DocNav2'
 import DocNav3 from '@/pages/doc/DocNav3'
 import DocRouterviewSlide from '@/pages/doc/DocRouterviewSlide'
+import DocSearch from '@/pages/doc/DocSearch'
 import DocTab1 from '@/pages/doc/DocTab1'
 import DocTable1 from '@/pages/doc/DocTable1'
 import DocTable2 from '@/pages/doc/DocTable2'
@@ -126,6 +127,11 @@ export default new Router({
       path: '/component/routerviewSlide',
       name: 'routerviewSlide',
       component: DocRouterviewSlide
+    },
+    {
+      path: '/component/search',
+      name: 'Search',
+      component: DocSearch
     },
     {
       path: '/component/tab1',

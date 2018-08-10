@@ -84,6 +84,10 @@ export default [
         to: '/component/routerviewSlide'
       },
       {
+        title: '搜索',
+        to: '/component/search'
+      },
+      {
         title: '选项卡1',
         to: '/component/tab1'
       },

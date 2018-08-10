@@ -6,7 +6,8 @@
     <section class="likePreWrap">
       <h6>一、新增组件</h6>
       <p>1、在组件目录components/下新增你的组件目录及文件，如：Dialog/Dialog.vue, Dialog/index.js</p>
-      <p>2、修改assets/js/useComponents，把上步的组件添加进去</p>
+      <p>2、修改components/index.js，为了输出组件</p>
+      <p>3、修改assets/js/useComponents，为了在文档中使用组件</p>
       <h6>二、新增组件文档</h6>
       <p>1、在文档页面目录pages/doc/下新增你的组件文档文件，如：DocDialog.vue</p>
       <p>2、在DocDialog.vue里使用全局注册的组件并传入组件必传参数，如：{{huiDialog}}</p>

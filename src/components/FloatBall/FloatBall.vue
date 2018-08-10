@@ -99,6 +99,7 @@ export default {
       this.touch.initiated = true
       this.touch.startY = e.touches[0].pageY
       this.touch.startX = e.touches[0].pageX
+      this.touch.startTime = new Date()
 
       if (this.top && this.left) { // 上左
         this.touch.originTop = parseInt(this.$refs.floatBall.style.top)
@@ -147,10 +148,10 @@ export default {
     },
     end (e) {
       this.$refs.floatBall.style.backgroundColor = 'rgba(38, 194, 209, 0.6)'
-      this.touch.initiated = false
+      this.touch.endTime = new Date()
 
-      // 如果抬起值与按下值相同，说明是单击
-      if (e.changedTouches[0].pageX === this.touch.startX) {
+      // 如果touchstart到touchend小于200毫秒且抬起值与按下值相同，说明是单击
+      if ((this.touch.endTime - this.touch.startTime < 200) && e.changedTouches[0].pageX === this.touch.startX) {
         this.click()
       }
       this.touch.initiated = false
@@ -177,7 +178,7 @@ export default {
     align-items: center;
     background-color: rgba(38, 194, 209, 0.6);
     border-radius: 50%;
-    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
     transition: background-color 0.4s;
     [class*="nxst"]{
       position: absolute;

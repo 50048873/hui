@@ -8,6 +8,7 @@ import Message from './Message'
 import Nav1 from './Nav1'
 import Nav3 from './Nav3'
 import RouterviewSlide from './RouterviewSlide'
+import Search from './Search'
 import Tab1 from './Tab1'
 import Table1 from './Table1'
 import Table2 from './Table2'
@@ -29,6 +30,7 @@ const all = (Vue) => {
   Vue.use(Nav1)
   Vue.use(Nav3)
   Vue.use(RouterviewSlide)
+  Vue.use(Search)
   Vue.use(Tab1)
   Vue.use(Table1)
   Vue.use(Table2)
@@ -47,6 +49,7 @@ export {
   Nav1,
   Nav3,
   RouterviewSlide,
+  Search,
   Tab1,
   Table1,
   Table2,
