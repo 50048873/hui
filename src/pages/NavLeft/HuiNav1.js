@@ -72,6 +72,10 @@ export default [
         to: '/component/nav3'
       },
       {
+        title: '无数据提示',
+        to: '/component/nodata'
+      },
+      {
         title: '上拉刷新',
         to: '/component/pullupRefresh'
       },

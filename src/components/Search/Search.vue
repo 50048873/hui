@@ -1,12 +1,12 @@
 <template>
   <label for="searchInput" class="Search" :class="{'center': center}" :style="getBgColor">
     <span class="extend-click" @click.prevent><i class="hui-icon-search"></i></span>
-    <input id="searchInput" ref="searchInput" type="text" :placeholder="placeholder" v-model="searchValue" />
+    <input id="searchInput" ref="searchInput" type="text" :placeholder="placeholder" />
   </label>
 </template>
 
 <script>
-
+import {throttle} from '../../assets/util/universal'
 export default {
   name: 'HuiSearch',
   props: {
@@ -21,11 +21,14 @@ export default {
     backgroundColor: {
       type: String,
       default: 'white'
-    }
-  },
-  data () {
-    return {
-      searchValue: ''
+    },
+    isThrottle: {
+      type: Boolean,
+      default: true
+    },
+    time: {
+      type: [Number, String],
+      default: 200
     }
   },
   computed: {
@@ -35,17 +38,24 @@ export default {
       }
     }
   },
-  watch: {
-    searchValue (newVal) {
-      if (!this.center) return
-      let len = newVal.length
-      if (len > 0) {
-        this.$refs.searchInput.style.width = len + 1 + 'em'
-      } else {
-        this.$refs.searchInput.style.width = 5 + 'em'
+  methods: {
+    registerKeyupEvent () {
+      let searchInput = this.$refs.searchInput
+      let fn = () => {
+        let newVal = searchInput.value
+        this.$emit('search-change', newVal)
       }
-      this.$emit('search-change', newVal)
+      searchInput.addEventListener('keyup', () => {
+        if (this.isThrottle) {
+          throttle(fn, this, parseInt(this.time) || this.time)
+        } else {
+          fn()
+        }
+      }, false)
     }
+  },
+  mounted () {
+    this.registerKeyupEvent()
   }
 }
 </script>

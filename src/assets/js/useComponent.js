@@ -10,6 +10,7 @@ import Message from '@/components/Message'
 import Nav1 from '@/components/Nav1'
 import Nav2 from '@/components/Nav2'
 import Nav3 from '@/components/Nav3'
+import NoData from '@/components/NoData'
 import RouterviewSlide from '@/components/RouterviewSlide'
 import Search from '@/components/Search'
 import Tab1 from '@/components/Tab1'
@@ -30,6 +31,7 @@ export default () => {
   Vue.use(Nav1)
   Vue.use(Nav2)
   Vue.use(Nav3)
+  Vue.use(NoData)
   Vue.use(RouterviewSlide)
   Vue.use(Search)
   Vue.use(Tab1)

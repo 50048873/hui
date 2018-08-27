@@ -18,6 +18,7 @@ import DocMessage from '@/pages/doc/DocMessage'
 import DocNav1 from '@/pages/doc/DocNav1'
 import DocNav2 from '@/pages/doc/DocNav2'
 import DocNav3 from '@/pages/doc/DocNav3'
+import DocNodata from '@/pages/doc/DocNodata'
 import DocRouterviewSlide from '@/pages/doc/DocRouterviewSlide'
 import DocSearch from '@/pages/doc/DocSearch'
 import DocTab1 from '@/pages/doc/DocTab1'
@@ -122,6 +123,11 @@ export default new Router({
       path: '/component/nav3',
       name: 'nav3',
       component: DocNav3
+    },
+    {
+      path: '/component/nodata',
+      name: 'DocNodata',
+      component: DocNodata
     },
     {
       path: '/component/routerviewSlide',
